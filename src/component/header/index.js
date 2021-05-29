@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import useStyles from './style';
+import Home from '../../pages';
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -75,21 +76,23 @@ const Header = () => {
           <LinkTab label="CONTACT" href="/contact" {...a11yProps(4)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        Home
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        ABOUT ME
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        RESUME
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        PORTFOLIO
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        CONTACT
-      </TabPanel>
+      <div>
+        <TabPanel value={value} index={0}>
+          <Home />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          ABOUT ME
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          RESUME
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          PORTFOLIO
+        </TabPanel>
+        <TabPanel value={value} index={4}>
+          CONTACT
+        </TabPanel>
+      </div>
     </div>
   );
 };
