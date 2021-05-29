@@ -59,7 +59,6 @@ const Header = () => {
   };
   return (
     <div className={classes.root}>
-      {/* {console.log(value, 111)} */}
       <AppBar position="static">
         <Tabs
           orientation="vertical"
@@ -69,11 +68,11 @@ const Header = () => {
           aria-label="vertical tabs "
           className={classes.tabs}
         >
-          <LinkTab label="HOME" href="/drafts" {...a11yProps(0)} />
-          <LinkTab label="ABOUT ME" href="/trash" {...a11yProps(1)} />
-          <LinkTab label="RESUME" href="/spam" {...a11yProps(2)} />
-          <LinkTab label="PORTFOLIO" href="/spam" {...a11yProps(3)} />
-          <LinkTab label="CONTACT" href="/spam" {...a11yProps(4)} />
+          <LinkTab label="HOME" href="/home" {...a11yProps(0)} />
+          <LinkTab label="ABOUT ME" href="/about" {...a11yProps(1)} />
+          <LinkTab label="RESUME" href="/resume" {...a11yProps(2)} />
+          <LinkTab label="PORTFOLIO" href="/portfolio" {...a11yProps(3)} />
+          <LinkTab label="CONTACT" href="/contact" {...a11yProps(4)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
