@@ -17,8 +17,8 @@ const TabPanel = (props) => {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`nav-tabpanel-${index}`}
-      aria-labelledby={`nav-tab-${index}`}
+      id={`vertical-tabpanel-${index}`}
+      aria-labelledby={`vertical-tab-${index}`}
       {...other}
     >
       {value === index && (
@@ -47,8 +47,8 @@ const LinkTab = (props) => (
 
 function a11yProps(index) {
   return {
-    id: `nav-tab-${index}`,
-    'aria-controls': `nav-tabpanel-${index}`,
+    id: `vertical-tab-${index}`,
+    'aria-controls': `vertical-tabpanel-${index}`,
   };
 }
 const Header = () => {
@@ -59,30 +59,37 @@ const Header = () => {
   };
   return (
     <div className={classes.root}>
+      {/* {console.log(value, 111)} */}
       <AppBar position="static">
         <Tabs
-          variant="fullWidth"
+          orientation="vertical"
+          variant="scrollable"
           value={value}
           onChange={handleChange}
-          aria-label="nav tabs example"
+          aria-label="vertical tabs "
+          className={classes.tabs}
         >
-          <LinkTab label="Home" href="/drafts" {...a11yProps(0)} />
-          <LinkTab label="Skills" href="/trash" {...a11yProps(1)} />
-          <LinkTab label="Projects" href="/spam" {...a11yProps(2)} />
-          <LinkTab label="Contact me" href="/spam" {...a11yProps(3)} />
+          <LinkTab label="HOME" href="/drafts" {...a11yProps(0)} />
+          <LinkTab label="ABOUT ME" href="/trash" {...a11yProps(1)} />
+          <LinkTab label="RESUME" href="/spam" {...a11yProps(2)} />
+          <LinkTab label="PORTFOLIO" href="/spam" {...a11yProps(3)} />
+          <LinkTab label="CONTACT" href="/spam" {...a11yProps(4)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
         Home
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Skills
+        ABOUT ME
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Projects
+        RESUME
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Contact me
+        PORTFOLIO
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        CONTACT
       </TabPanel>
     </div>
   );
