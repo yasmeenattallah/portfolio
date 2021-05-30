@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     height: 270,
     width: 200,
+    '& .MuiBox-root': {
+      padding: 0,
+    },
   },
   tabs: {
     borderRight: `1px solid ${theme.palette.divider}`,
