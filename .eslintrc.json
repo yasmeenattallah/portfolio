@@ -1,6 +1,6 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "prettier","plugin:jest/recommended"],
+  "extends": [ "prettier","plugin:jest/recommended"],
   "parserOptions": {
     "ecmaVersion": 12,
     "ecmaFeatures": {
