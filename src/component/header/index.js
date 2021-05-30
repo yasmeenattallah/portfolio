@@ -12,9 +12,7 @@ import useStyles from './style';
 import Home from '../../pages';
 
 const TabPanel = (props) => {
-  const {
-    children, value, index, ...other
-  } = props;
+  const { children, value, index, ...other } = props;
 
   return (
     <div
