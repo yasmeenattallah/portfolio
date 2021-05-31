@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { CssBaseline } from '@material-ui/core';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Button from '@material-ui/core/Button';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 
+import useStyles from './style';
+
 export default function Dashboard() {
+  const classes = useStyles();
   const [darkState, setDarkState] = useState(false);
   const darkTheme = createMuiTheme({
     palette: {
@@ -58,9 +62,11 @@ export default function Dashboard() {
   return (
     <ThemeProvider theme={darkState ? darkTheme : lightTheme}>
       <CssBaseline />
-      <Button onClick={handleThemeChange} title="Toggle light/dark theme">
-        {darkState ? <Brightness7Icon /> : <Brightness4Icon />}
-      </Button>
+      <div className={classes.toggleTheme}>
+        <Button onClick={handleThemeChange} title="Toggle light/dark theme">
+          {darkState ? <Brightness7Icon /> : <Brightness4Icon />}
+        </Button>
+      </div>
     </ThemeProvider>
   );
 }
