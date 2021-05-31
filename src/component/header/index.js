@@ -70,7 +70,16 @@ const Header = () => {
           aria-label="vertical tabs "
           className={classes.tabs}
         >
-          <img src={personal} alt="personal" {...a11yProps(0)} />
+          <div {...a11yProps(0)} className={classes.personalContainer}>
+            <img
+              src={personal}
+              alt="personal"
+              className={classes.personalImg}
+            />
+            <Typography className={classes.personalText}>
+              Yasmeen attallah
+            </Typography>
+          </div>
           <LinkTab label="HOME" href="/home" {...a11yProps(1)} />
           <LinkTab label="ABOUT ME" href="/about" {...a11yProps(2)} />
           <LinkTab label="RESUME" href="/resume" {...a11yProps(3)} />
