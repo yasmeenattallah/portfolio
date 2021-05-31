@@ -5,8 +5,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
-    height: 270,
-    width: 200,
+    height: 582,
+    width: 160,
     '& .MuiBox-root': {
       padding: 0,
     },

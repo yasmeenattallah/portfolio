@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box';
 
 import useStyles from './style';
 import Home from '../../pages';
+import personal from '../../images/personal.jpg';
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -69,27 +70,28 @@ const Header = () => {
           aria-label="vertical tabs "
           className={classes.tabs}
         >
-          <LinkTab label="HOME" href="/home" {...a11yProps(0)} />
-          <LinkTab label="ABOUT ME" href="/about" {...a11yProps(1)} />
-          <LinkTab label="RESUME" href="/resume" {...a11yProps(2)} />
-          <LinkTab label="PORTFOLIO" href="/portfolio" {...a11yProps(3)} />
-          <LinkTab label="CONTACT" href="/contact" {...a11yProps(4)} />
+          <img src={personal} alt="personal" {...a11yProps(0)} />
+          <LinkTab label="HOME" href="/home" {...a11yProps(1)} />
+          <LinkTab label="ABOUT ME" href="/about" {...a11yProps(2)} />
+          <LinkTab label="RESUME" href="/resume" {...a11yProps(3)} />
+          <LinkTab label="PORTFOLIO" href="/portfolio" {...a11yProps(4)} />
+          <LinkTab label="CONTACT" href="/contact" {...a11yProps(5)} />
         </Tabs>
       </AppBar>
       <div>
-        <TabPanel value={value} index={0}>
+        <TabPanel value={value} index={1}>
           <Home />
         </TabPanel>
-        <TabPanel value={value} index={1}>
+        <TabPanel value={value} index={2}>
           ABOUT ME
         </TabPanel>
-        <TabPanel value={value} index={2}>
+        <TabPanel value={value} index={3}>
           RESUME
         </TabPanel>
-        <TabPanel value={value} index={3}>
+        <TabPanel value={value} index={4}>
           PORTFOLIO
         </TabPanel>
-        <TabPanel value={value} index={4}>
+        <TabPanel value={value} index={5}>
           CONTACT
         </TabPanel>
       </div>
