@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { CssBaseline } from '@material-ui/core';
-import Switch from '@material-ui/core/Switch';
+import Button from '@material-ui/core/Button';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
+import Brightness7Icon from '@material-ui/icons/Brightness7';
 
 export default function Dashboard() {
   const [darkState, setDarkState] = useState(false);
@@ -56,7 +58,9 @@ export default function Dashboard() {
   return (
     <ThemeProvider theme={darkState ? darkTheme : lightTheme}>
       <CssBaseline />
-      <Switch checked={darkState} onChange={handleThemeChange} />
+      <Button onClick={handleThemeChange} title="Toggle light/dark theme">
+        {darkState ? <Brightness7Icon /> : <Brightness4Icon />}
+      </Button>
     </ThemeProvider>
   );
 }
