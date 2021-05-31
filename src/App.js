@@ -5,8 +5,8 @@ import Dashboard from './theme';
 function App() {
   return (
     <div>
-      <Header />
       <Dashboard />
+      <Header />
     </div>
   );
 }

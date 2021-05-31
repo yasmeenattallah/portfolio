@@ -5,12 +5,11 @@ import Switch from '@material-ui/core/Switch';
 
 export default function Dashboard() {
   const [darkState, setDarkState] = useState(false);
-  const palletType = darkState ? 'dark' : 'light';
   const darkTheme = createMuiTheme({
     palette: {
-      type: palletType,
+      type: 'dark',
       text: {
-        primary: '#fffff',
+        primary: '#ffffff',
         secondary: '#C1C1C1',
         disabled: '#989898',
       },
@@ -57,7 +56,6 @@ export default function Dashboard() {
   return (
     <ThemeProvider theme={darkState ? darkTheme : lightTheme}>
       <CssBaseline />
-      <div> Sample Text </div>
       <Switch checked={darkState} onChange={handleThemeChange} />
     </ThemeProvider>
   );
