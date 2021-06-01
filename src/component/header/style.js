@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     display: 'flex',
@@ -36,7 +36,16 @@ const useStyles = makeStyles(() => ({
     fontFamily: 'Playfair Display',
   },
   tabs: {
-    borderRight: `1px solid red`,
+    '& .PrivateTabIndicator-colorSecondary-9': {
+      backgroundColor: '#303030',
+    },
+    '& .MuiTab-wrapper': {
+      alignItems: 'flex-start',
+      flexDirection: 'row',
+    },
+    '& .MuiSvgIcon-root': {
+      margin: theme.spacing(0, 5, 0, 0),
+    },
   },
 }));
 export default useStyles;

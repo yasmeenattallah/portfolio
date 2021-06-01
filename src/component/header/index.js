@@ -7,6 +7,11 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import HomeIcon from '@material-ui/icons/Home';
+import PersonIcon from '@material-ui/icons/Person';
+import EmailIcon from '@material-ui/icons/Email';
+import CardTravelIcon from '@material-ui/icons/CardTravel';
+import NotesIcon from '@material-ui/icons/Notes';
 
 import useStyles from './style';
 import Home from '../../pages';
@@ -80,11 +85,36 @@ const Header = () => {
               YASMEEN ATTALLAH
             </Typography>
           </div>
-          <LinkTab label="HOME" href="/home" {...a11yProps(1)} />
-          <LinkTab label="ABOUT ME" href="/about" {...a11yProps(2)} />
-          <LinkTab label="RESUME" href="/resume" {...a11yProps(3)} />
-          <LinkTab label="PORTFOLIO" href="/portfolio" {...a11yProps(4)} />
-          <LinkTab label="CONTACT" href="/contact" {...a11yProps(5)} />
+          <LinkTab
+            label="HOME"
+            href="/home"
+            {...a11yProps(1)}
+            icon={<HomeIcon />}
+          />
+          <LinkTab
+            label="ABOUT ME"
+            href="/about"
+            icon={<PersonIcon />}
+            {...a11yProps(2)}
+          />
+          <LinkTab
+            label="RESUME"
+            href="/resume"
+            icon={<NotesIcon />}
+            {...a11yProps(3)}
+          />
+          <LinkTab
+            label="PORTFOLIO"
+            href="/portfolio"
+            icon={<CardTravelIcon />}
+            {...a11yProps(4)}
+          />
+          <LinkTab
+            label="CONTACT"
+            href="/contact"
+            icon={<EmailIcon />}
+            {...a11yProps(5)}
+          />
         </Tabs>
       </AppBar>
       <div>
