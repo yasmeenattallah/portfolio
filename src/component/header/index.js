@@ -61,7 +61,7 @@ const Header = () => {
   };
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="primary">
         <Tabs
           orientation="vertical"
           variant="scrollable"
@@ -77,7 +77,7 @@ const Header = () => {
               className={classes.personalImg}
             />
             <Typography className={classes.personalText}>
-              Yasmeen attallah
+              YASMEEN ATTALLAH
             </Typography>
           </div>
           <LinkTab label="HOME" href="/home" {...a11yProps(1)} />

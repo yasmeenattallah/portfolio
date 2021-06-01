@@ -1,14 +1,16 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.paper,
     display: 'flex',
     height: 582,
     width: 180,
     '& .MuiBox-root': {
       padding: 0,
+    },
+    '& .MuiAppBar-root': {
+      backgroundColor: '#17181B',
     },
   },
   personalContainer: {
@@ -27,11 +29,14 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     width: 180,
     height: 40,
-    border: '1px solid #92d9f4',
-    backgroundColor: '#92d9f4',
+    border: '1px solid rgb(21,151,203,76%)',
+    backgroundColor: 'rgb(21,151,203,76%)',
+    paddingTop: 6,
+    fontWeight: 'bold',
+    fontFamily: 'Playfair Display',
   },
   tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
+    borderRight: `1px solid red`,
   },
 }));
 export default useStyles;
