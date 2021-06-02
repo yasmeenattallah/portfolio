@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from '../component';
-import Dashboard from './theme';
+import Theme from './theme';
 
 function App() {
   return (
     <div>
-      <Dashboard />
+      <Theme />
       <Header />
     </div>
   );

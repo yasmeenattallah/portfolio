@@ -8,7 +8,7 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 
 import useStyles from './style';
 
-export default function Dashboard() {
+export default function Theme() {
   const classes = useStyles();
   const [darkState, setDarkState] = useState(false);
   const darkTheme = createMuiTheme({
@@ -23,7 +23,7 @@ export default function Dashboard() {
         primary: '#303030',
         paper: '#424242',
       },
-      divider: '#494949',
+      divider: '#424242',
       action: {
         active: '#ffffff',
         hover: '#404040',
@@ -45,7 +45,7 @@ export default function Dashboard() {
         primary: '#FAFAFA',
         paper: '#ffffff',
       },
-      divider: '#DCDCDC',
+      divider: '#2a2b30',
       action: {
         active: '#727272',
         hover: '#F0F0F0',

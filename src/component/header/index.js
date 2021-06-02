@@ -7,9 +7,19 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
+import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
+import CardTravelOutlinedIcon from '@material-ui/icons/CardTravelOutlined';
+import ListAltOutlinedIcon from '@material-ui/icons/ListAltOutlined';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 import useStyles from './style';
 import Home from '../../pages';
+import personal from '../../images/personal.jpg';
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -60,7 +70,7 @@ const Header = () => {
   };
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="primary">
         <Tabs
           orientation="vertical"
           variant="scrollable"
@@ -69,27 +79,82 @@ const Header = () => {
           aria-label="vertical tabs "
           className={classes.tabs}
         >
-          <LinkTab label="HOME" href="/home" {...a11yProps(0)} />
-          <LinkTab label="ABOUT ME" href="/about" {...a11yProps(1)} />
-          <LinkTab label="RESUME" href="/resume" {...a11yProps(2)} />
-          <LinkTab label="PORTFOLIO" href="/portfolio" {...a11yProps(3)} />
-          <LinkTab label="CONTACT" href="/contact" {...a11yProps(4)} />
+          <div {...a11yProps(0)} className={classes.personalContainer}>
+            <img
+              src={personal}
+              alt="personal"
+              className={classes.personalImg}
+            />
+            <Typography className={classes.personalText}>
+              YASMEEN ATTALLAH
+            </Typography>
+          </div>
+          <LinkTab
+            label="HOME"
+            href="/home"
+            {...a11yProps(1)}
+            icon={<HomeOutlinedIcon />}
+          />
+          <LinkTab
+            label="ABOUT ME"
+            href="/about"
+            icon={<PersonOutlineOutlinedIcon />}
+            {...a11yProps(2)}
+          />
+          <LinkTab
+            label="RESUME"
+            href="/resume"
+            icon={<ListAltOutlinedIcon />}
+            {...a11yProps(3)}
+          />
+          <LinkTab
+            label="PORTFOLIO"
+            href="/portfolio"
+            icon={<CardTravelOutlinedIcon />}
+            {...a11yProps(4)}
+          />
+          <LinkTab
+            label="CONTACT"
+            href="/contact"
+            icon={<EmailOutlinedIcon />}
+            {...a11yProps(5)}
+          />
+          <div className={classes.footer}>
+            <Link href="https://github.com/yasmeenattallah" {...a11yProps(6)}>
+              <GitHubIcon />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/yasmeen-attallah-51958712b/"
+              {...a11yProps(7)}
+            >
+              <LinkedInIcon />
+            </Link>
+            <Link
+              href="https://www.facebook.com/profile.php?id=100009599895904"
+              {...a11yProps(8)}
+            >
+              <FacebookIcon />
+            </Link>
+            <Typography {...a11yProps(9)}>
+              2021 &#169; yasmeen Attallah <br /> All Right Reserved.
+            </Typography>
+          </div>
         </Tabs>
       </AppBar>
       <div>
-        <TabPanel value={value} index={0}>
+        <TabPanel value={value} index={1}>
           <Home />
         </TabPanel>
-        <TabPanel value={value} index={1}>
+        <TabPanel value={value} index={2}>
           ABOUT ME
         </TabPanel>
-        <TabPanel value={value} index={2}>
+        <TabPanel value={value} index={3}>
           RESUME
         </TabPanel>
-        <TabPanel value={value} index={3}>
+        <TabPanel value={value} index={4}>
           PORTFOLIO
         </TabPanel>
-        <TabPanel value={value} index={4}>
+        <TabPanel value={value} index={5}>
           CONTACT
         </TabPanel>
       </div>
