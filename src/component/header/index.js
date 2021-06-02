@@ -7,11 +7,15 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Link from '@material-ui/core/Link';
 import HomeIcon from '@material-ui/icons/Home';
 import PersonIcon from '@material-ui/icons/Person';
 import EmailIcon from '@material-ui/icons/Email';
 import CardTravelIcon from '@material-ui/icons/CardTravel';
 import NotesIcon from '@material-ui/icons/Notes';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 import useStyles from './style';
 import Home from '../../pages';
@@ -115,6 +119,26 @@ const Header = () => {
             icon={<EmailIcon />}
             {...a11yProps(5)}
           />
+          <div className={classes.footer}>
+            <Link href="https://github.com/yasmeenattallah" {...a11yProps(6)}>
+              <GitHubIcon />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/yasmeen-attallah-51958712b/"
+              {...a11yProps(7)}
+            >
+              <LinkedInIcon />
+            </Link>
+            <Link
+              href="https://www.facebook.com/profile.php?id=100009599895904"
+              {...a11yProps(8)}
+            >
+              <FacebookIcon />
+            </Link>
+            <Typography {...a11yProps(9)}>
+              2021 &#169; yasmeen Attallah <br /> All Right Reserved.
+            </Typography>
+          </div>
         </Tabs>
       </AppBar>
       <div>

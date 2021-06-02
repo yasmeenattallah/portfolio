@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
       padding: 0,
     },
     '& .MuiAppBar-root': {
-      backgroundColor: '#17181B',
+      backgroundColor: '#303030',
     },
   },
   personalContainer: {
@@ -36,15 +36,42 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Playfair Display',
   },
   tabs: {
-    '& .PrivateTabIndicator-colorSecondary-9': {
+    '& .MuiTabs-scroller': {
+      // display: 'none',
+    },
+    '& .PrivateTabIndicator-colorSecondary-10': {
       backgroundColor: '#303030',
+    },
+    '& .MuiTab-labelIcon': {
+      minHeight: 50,
+    },
+    '& .MuiTab-root': {
+      borderBottom: '1px solid #202020',
     },
     '& .MuiTab-wrapper': {
       alignItems: 'flex-start',
       flexDirection: 'row',
+      justifyContent: 'flex-start',
     },
     '& .MuiSvgIcon-root': {
-      margin: theme.spacing(0, 5, 0, 0),
+      margin: theme.spacing(0, 3, 0, 0),
+      color: '#999',
+    },
+  },
+  footer: {
+    margin: theme.spacing(3, 0, 0, 4),
+    '& .MuiTypography-colorPrimary': {
+      color: '#999',
+    },
+    '& .MuiTypography-body1': {
+      color: '#999999',
+      fontSize: '12px',
+      margin: theme.spacing(2, 5, 0, -2),
+      textAlign: 'center',
+    },
+    '& .MuiSvgIcon-root': {
+      margin: theme.spacing(0, 1, 0, 1),
+      fontSize: 19,
     },
   },
 }));
