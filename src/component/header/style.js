@@ -2,10 +2,11 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    margin: theme.spacing(-5, 0, 0, 0),
     flexGrow: 1,
     display: 'flex',
-    height: 582,
-    width: 180,
+    height: 622,
+    width: 200,
     '& .MuiBox-root': {
       padding: 0,
     },
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     bottom: '4px',
     left: '0px',
     textAlign: 'center',
-    width: 180,
+    width: 200,
     height: 40,
     border: '1px solid rgb(21,151,203,76%)',
     backgroundColor: 'rgb(21,151,203,76%)',
@@ -36,14 +37,11 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Playfair Display',
   },
   tabs: {
-    '& .MuiTabs-scroller': {
-      // display: 'none',
-    },
     '& .PrivateTabIndicator-colorSecondary-10': {
       backgroundColor: '#303030',
     },
     '& .MuiTab-labelIcon': {
-      minHeight: 50,
+      minHeight: 55,
     },
     '& .MuiTab-root': {
       borderBottom: '1px solid #202020',
@@ -59,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   footer: {
-    margin: theme.spacing(3, 0, 0, 4),
+    margin: theme.spacing(7, 0, 0, 4),
     '& .MuiTypography-colorPrimary': {
       color: '#999',
     },

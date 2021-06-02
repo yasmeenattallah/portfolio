@@ -8,11 +8,11 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
-import HomeIcon from '@material-ui/icons/Home';
-import PersonIcon from '@material-ui/icons/Person';
-import EmailIcon from '@material-ui/icons/Email';
-import CardTravelIcon from '@material-ui/icons/CardTravel';
-import NotesIcon from '@material-ui/icons/Notes';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
+import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
+import CardTravelOutlinedIcon from '@material-ui/icons/CardTravelOutlined';
+import ListAltOutlinedIcon from '@material-ui/icons/ListAltOutlined';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -93,30 +93,30 @@ const Header = () => {
             label="HOME"
             href="/home"
             {...a11yProps(1)}
-            icon={<HomeIcon />}
+            icon={<HomeOutlinedIcon />}
           />
           <LinkTab
             label="ABOUT ME"
             href="/about"
-            icon={<PersonIcon />}
+            icon={<PersonOutlineOutlinedIcon />}
             {...a11yProps(2)}
           />
           <LinkTab
             label="RESUME"
             href="/resume"
-            icon={<NotesIcon />}
+            icon={<ListAltOutlinedIcon />}
             {...a11yProps(3)}
           />
           <LinkTab
             label="PORTFOLIO"
             href="/portfolio"
-            icon={<CardTravelIcon />}
+            icon={<CardTravelOutlinedIcon />}
             {...a11yProps(4)}
           />
           <LinkTab
             label="CONTACT"
             href="/contact"
-            icon={<EmailIcon />}
+            icon={<EmailOutlinedIcon />}
             {...a11yProps(5)}
           />
           <div className={classes.footer}>
