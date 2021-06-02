@@ -8,10 +8,14 @@ const Home = () => {
   const classes = useStyles();
   return (
     <div className={classes.background}>
-      <Typography className={classes.typo}>
-        YASMEEN ATTALLAH <br />
-        I&apos;M A FRONT-END WEB DEVELOPER
-      </Typography>
+      <div className={classes.typo}>
+        <Typography className={classes.typo1}>
+          YASMEEN ATTALLAH <br />
+        </Typography>
+        <Typography className={classes.typo2}>
+          I&apos;m a Front-End Web Developer
+        </Typography>
+      </div>
     </div>
   );
 };
