@@ -11,47 +11,37 @@ import useStyles from './style';
 export default function Theme() {
   const classes = useStyles();
   const [darkState, setDarkState] = useState(false);
+  const paletteType = darkState ? 'dark' : 'light';
+  const primaryText = darkState ? '#ffffff' : '#202020';
+  const secText = darkState ? '#C1C1C1' : '#727272';
+  const disableText = darkState ? '#989898' : '#FAFAFA';
+  const primaryBackground = darkState ? '#303030' : '#FAFAFA';
+  const paperGround = darkState ? '#424242' : '#727272';
+  const divider = darkState ? '#424242' : '#2a2b30';
+  const activeAction = darkState ? '#ffffff' : '#727272';
+  const hoverAction = darkState ? '#404040' : '#F0F0F0';
+  const selectedAction = darkState ? '#515151' : '#E6E6E6';
+  const disableAction = darkState ? '#6F6F6F' : '#BABABA';
+  const disableGroundAction = darkState ? '#303030' : '#DCDCDC';
   const darkTheme = createMuiTheme({
     palette: {
-      type: 'dark',
+      type: paletteType,
       text: {
-        primary: '#ffffff',
-        secondary: '#C1C1C1',
-        disabled: '#989898',
+        primary: primaryText,
+        secondary: secText,
+        disabled: disableText,
       },
       background: {
-        primary: '#303030',
-        paper: '#424242',
+        primary: primaryBackground,
+        paper: paperGround,
       },
-      divider: '#424242',
+      divider,
       action: {
-        active: '#ffffff',
-        hover: '#404040',
-        selected: '#515151',
-        disabled: '#6F6F6F',
-        disabledBackground: '#303030',
-      },
-    },
-  });
-  const lightTheme = createMuiTheme({
-    palette: {
-      type: 'light',
-      text: {
-        primary: '#202020',
-        secondary: '#727272',
-        disabled: '#FAFAFA',
-      },
-      background: {
-        primary: '#FAFAFA',
-        paper: '#ffffff',
-      },
-      divider: '#2a2b30',
-      action: {
-        active: '#727272',
-        hover: '#F0F0F0',
-        selected: '#E6E6E6',
-        disabled: '#BABABA',
-        disabledBackground: '#DCDCDC',
+        active: activeAction,
+        hover: hoverAction,
+        selected: selectedAction,
+        disabled: disableAction,
+        disabledBackground: disableGroundAction,
       },
     },
   });
@@ -60,10 +50,14 @@ export default function Theme() {
   };
 
   return (
-    <ThemeProvider theme={darkState ? darkTheme : lightTheme}>
+    <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <div className={classes.toggleTheme}>
-        <Button onClick={handleThemeChange} title="Toggle light/dark theme">
+        <Button
+          onClick={handleThemeChange}
+          title="Toggle light/dark theme"
+          checked={darkState}
+        >
           {darkState ? <Brightness7Icon /> : <Brightness4Icon />}
         </Button>
       </div>
