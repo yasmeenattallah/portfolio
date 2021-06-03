@@ -8,8 +8,7 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     borderBottom: `1px dotted ${theme.palette.divider}`,
-    display: 'flex',
-    justifyContent: 'flex-start',
+    width: 800,
     '& .MuiTypography-body1': {
       fontFamily: 'Kaushan Script',
     },
@@ -21,7 +20,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2rem',
   },
   icon: {
-    alignItems: 'flex-end',
+    color: '#00A3E1',
+    fontSize: '2rem',
+  },
+  subTitle: {
+    textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: '1.8rem',
+    fontFamily: 'Roboto',
   },
 }));
 export default useStyles;
