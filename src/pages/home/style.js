@@ -4,12 +4,14 @@ import home from '../../images/home.jpg';
 
 const useStyles = makeStyles((theme) => ({
   background: {
+    zIndex: -1000,
     backgroundImage: `url(${home})`,
     backgroundSize: 'cover',
     opacity: 0.8,
     width: 1166,
     height: 622,
     position: 'absolute',
+    transformStyle: 'preserve-3d',
   },
   typo: {
     textAlign: 'center',
