@@ -38,11 +38,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexFlow: 'row wrap',
     justifyContent: 'space-around',
-    margin: theme.spacing(7, 15),
-    width: 900,
+    margin: theme.spacing(7, 24),
+    width: 800,
   },
   input: {
-    width: 400,
     '& .MuiOutlinedInput-notchedOutline': {
       border: `1px solid #999`,
     },
@@ -55,6 +54,17 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiOutlinedInput-input:-webkit-autofill': {
       boxShadow: ' 0 0 0 100px black inset',
     },
+    '& .MuiOutlinedInput-multiline': {
+      width: 750,
+    },
+  },
+  inputBasic: {
+    width: 350,
+    marginBottom: 30,
+  },
+  btn: {
+    marginTop: 30,
+    alignSelf: 'center',
   },
 }));
 export default useStyles;

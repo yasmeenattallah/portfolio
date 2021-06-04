@@ -17,14 +17,24 @@ const ContactPage = () => {
       </div>
       <Typography className={classes.subTitle}>LET&apos;S TALK</Typography>
       <div className={classes.body}>
-        <TextField variant="outlined" label="Name" className={classes.input} />
-        <TextField variant="outlined" label="Email" className={classes.input} />
+        <TextField
+          variant="outlined"
+          label="Name"
+          className={(classes.input, classes.inputBasic)}
+        />
+        <TextField
+          variant="outlined"
+          label="Email"
+          className={(classes.input, classes.inputBasic)}
+        />
         <TextField
           placeholder="How can i help you "
           variant="outlined"
+          className={classes.input}
           multiline
+          rows={4}
         />
-        <Button variant="outlined" color="primary">
+        <Button variant="outlined" color="primary" className={classes.btn}>
           Send Message
         </Button>
       </div>
