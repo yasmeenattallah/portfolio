@@ -12,15 +12,13 @@ const ContactPage = () => {
   return (
     <div className={classes.root}>
       <div className={classes.header}>
-        <Typography className={classes.title}>
-          Contact Me
-          <MailOutlineIcon className={classes.icon} />
-        </Typography>
+        <Typography className={classes.title}>Contact Me</Typography>
+        <MailOutlineIcon className={classes.icon} />
       </div>
+      <Typography className={classes.subTitle}>LET&apos;S TALK</Typography>
       <div className={classes.body}>
-        <Typography className={classes.subTitle}>LET&apos;S TALK</Typography>
-        <TextField variant="outlined" label="Name" />
-        <TextField variant="outlined" label="Email" />
+        <TextField variant="outlined" label="Name" className={classes.input} />
+        <TextField variant="outlined" label="Email" className={classes.input} />
         <TextField
           placeholder="How can i help you "
           variant="outlined"
