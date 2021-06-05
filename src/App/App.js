@@ -25,7 +25,6 @@ function App() {
         onClick={handleThemeChange}
         title="Toggle light/dark theme"
         checked={darkState}
-        color="primary"
         className={classes.toggleTheme}
       >
         {darkState ? <Brightness7Icon /> : <Brightness4Icon />}

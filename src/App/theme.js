@@ -3,16 +3,11 @@ import { createMuiTheme } from '@material-ui/core/styles';
 const darkTheme = createMuiTheme({
   palette: {
     type: 'dark',
-    text: {
-      primary: '#fffff',
-      secondary: '#C1C1C1',
-      disabled: '#989898',
-    },
     background: {
       primary: '#303030',
       paper: '#424242',
     },
-    divider: '#494949',
+    divider: '#707070',
     action: {
       active: '#ffffff',
       hover: '#404040',
@@ -28,17 +23,15 @@ const darkTheme = createMuiTheme({
     MuiTextField: {
       color: '#fff',
     },
+    MuiTypography: {
+      color: '#fff',
+    },
   },
 });
 
 const lightTheme = createMuiTheme({
   palette: {
     type: 'light',
-    text: {
-      primary: '#202020',
-      secondary: '#727272',
-      disabled: '#FAFAFA',
-    },
     background: {
       primary: '#FAFAFA',
       paper: '#ffffff',
@@ -57,6 +50,9 @@ const lightTheme = createMuiTheme({
       variant: 'outlined',
     },
     MuiTextField: {
+      color: '#000',
+    },
+    MuiTypography: {
       color: '#000',
     },
   },
