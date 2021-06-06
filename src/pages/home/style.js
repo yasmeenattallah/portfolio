@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     fontFamily: 'Oswald',
     margin: theme.spacing(30, 0, 0, 0),
-    backgroundColor: theme.palette.action.active,
+    backgroundColor: theme.palette.divider,
   },
   typo1: {
     // width: 500,

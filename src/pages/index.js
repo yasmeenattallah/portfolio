@@ -1,3 +1,4 @@
 import Home from './home';
+import ContactPage from './contact';
 
-export default Home;
+export { Home, ContactPage };
