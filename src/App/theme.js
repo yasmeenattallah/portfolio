@@ -5,7 +5,7 @@ const darkTheme = createMuiTheme({
     type: 'dark',
     background: {
       primary: '#303030',
-      paper: '#424242',
+      paper: '#202020',
     },
     divider: '#707070',
     action: {

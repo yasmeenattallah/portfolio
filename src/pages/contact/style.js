@@ -67,15 +67,21 @@ const useStyles = makeStyles((theme) => ({
     '& .PrivateNotchedOutline-root-344 .MuiOutlinedInput-notchedOutline': {
       color: theme.props.MuiTypography.color,
     },
-    '& .MuiButton-outlinedPrimary': {
-      color: '#0f0',
-    },
   },
-
   btn: {
+    '&.MuiButton-outlinedPrimary': {
+      color: '#00A3E1',
+      border: '2px solid #00A3E1',
+      '&:hover': {
+        backgroundColor: '#00A3E1',
+        color: theme.palette.background.paper,
+      },
+    },
     marginTop: 30,
     alignSelf: 'center',
-    color: theme.props.MuiTypography.color,
+    color: '#00A3E1',
+    fontWeight: 'bolder',
+    fontSize: '1rem',
   },
 }));
 export default useStyles;
