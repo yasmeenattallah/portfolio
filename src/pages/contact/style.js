@@ -43,13 +43,16 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
     '& .MuiOutlinedInput-notchedOutline': {
-      border: `1px solid #999`,
+      border: `1px solid ${theme.props.MuiTypography.color}`,
     },
     '& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline ': {
-      borderColor: '#000',
+      borderColor: theme.props.MuiTypography.color,
     },
-    '& .MuiFormLabel-root': {
-      color: '#000',
+    '& .MuiInputBase-root': {
+      color: theme.props.MuiTypography.color,
+      fontWeight: 'bold',
+      width: 350,
+      marginBottom: 30,
     },
     '& .MuiOutlinedInput-input:-webkit-autofill': {
       boxShadow: ' 0 0 0 100px black inset',
@@ -57,14 +60,28 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiOutlinedInput-multiline': {
       width: 750,
     },
-  },
-  inputBasic: {
-    width: 350,
-    marginBottom: 30,
+    '& .MuiInputLabel-root': {
+      color: theme.props.MuiTypography.color,
+      fontWeight: 'bold',
+    },
+    '& .PrivateNotchedOutline-root-344 .MuiOutlinedInput-notchedOutline': {
+      color: theme.props.MuiTypography.color,
+    },
   },
   btn: {
+    '&.MuiButton-outlinedPrimary': {
+      color: '#00A3E1',
+      border: '2px solid #00A3E1',
+      '&:hover': {
+        backgroundColor: '#00A3E1',
+        color: theme.palette.background.paper,
+      },
+    },
     marginTop: 30,
     alignSelf: 'center',
+    color: '#00A3E1',
+    fontWeight: 'bolder',
+    fontSize: '1rem',
   },
 }));
 export default useStyles;

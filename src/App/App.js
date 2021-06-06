@@ -1,13 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Button from '@material-ui/core/Button';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
+import Brightness7Icon from '@material-ui/icons/Brightness7';
+
 import Header from '../component';
-import Theme from './theme';
+
+import { darkTheme, lightTheme } from './theme';
+
+import useStyles from './style';
 
 function App() {
+  const classes = useStyles();
+  const [darkState, setDarkState] = useState(false);
+  const handleThemeChange = () => {
+    setDarkState(!darkState);
+  };
   return (
-    <div>
-      <Theme />
+    <ThemeProvider theme={darkState ? darkTheme : lightTheme}>
+      <CssBaseline />
+      <div className={classes.toggleTheme}>
+        <Button
+          onClick={handleThemeChange}
+          title="Toggle light/dark theme"
+          checked={darkState}
+        >
+          {darkState ? <Brightness7Icon /> : <Brightness4Icon />}
+        </Button>
+      </div>
       <Header />
-    </div>
+    </ThemeProvider>
   );
 }
 
