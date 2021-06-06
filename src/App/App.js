@@ -21,14 +21,15 @@ function App() {
   return (
     <ThemeProvider theme={darkState ? darkTheme : lightTheme}>
       <CssBaseline />
-      <Button
-        onClick={handleThemeChange}
-        title="Toggle light/dark theme"
-        checked={darkState}
-        className={classes.toggleTheme}
-      >
-        {darkState ? <Brightness7Icon /> : <Brightness4Icon />}
-      </Button>
+      <div className={classes.toggleTheme}>
+        <Button
+          onClick={handleThemeChange}
+          title="Toggle light/dark theme"
+          checked={darkState}
+        >
+          {darkState ? <Brightness7Icon /> : <Brightness4Icon />}
+        </Button>
+      </div>
       <Header />
     </ThemeProvider>
   );
