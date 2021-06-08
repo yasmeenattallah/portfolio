@@ -14,10 +14,12 @@ const AboutMe = () => {
       </div>
       <div className={classes.body}>
         <Typography className={classes.sectionOne}>
-          Front-End developer
+          <span className={classes.bodyTitle}> Front-End developer</span>
+          <br />
         </Typography>
-        <Typography className={classes.SectionTwo}>
-          Personal Information <br />
+        <Typography className={classes.sectionTwo}>
+          <span className={classes.bodyTitle}> Personal Information </span>
+          <br />
           <span> Name : </span> yasmeen attallah <br />
           <span> Age : </span> 24 <br />
           <span> Residence : </span> Palestine, Gaza <br />

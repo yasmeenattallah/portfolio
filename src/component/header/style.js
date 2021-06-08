@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#303030',
     },
     '& .MuiTab-labelIcon': {
+      fontFamily: 'Arial',
       minHeight: 55,
     },
     '& .MuiTab-root': {
@@ -62,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
       color: '#999',
     },
     '& .MuiTypography-body1': {
+      fontFamily: 'Arial',
       color: '#999999',
       fontSize: '12px',
       margin: theme.spacing(2, 5, 0, -2),

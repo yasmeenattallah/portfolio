@@ -11,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiTypography-body1': {
       display: 'inline-flex',
       justifyContent: 'flex-start',
-      // alignItems: 'center',
       fontFamily: 'Kaushan Script',
     },
     margin: theme.spacing(6, 10),
@@ -32,14 +31,21 @@ const useStyles = makeStyles((theme) => ({
     width: '1000px',
     display: 'flex',
     margin: theme.spacing(0, 10),
+    color: theme.props.MuiTypography.color,
   },
   sectionOne: {
+    fontFamily: 'Arial',
+    fontWeight: 'bold',
     width: '60%',
     border: '1px solid #f00',
   },
   sectionTwo: {
     width: '40%',
-    border: '1px solid #f00',
+    border: '1px solid #0f0',
+    fontFamily: 'Arial',
+  },
+  bodyTitle: {
+    fontWeight: 'bold',
   },
 }));
 
