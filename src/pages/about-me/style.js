@@ -28,6 +28,19 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2.8rem',
     marginBottom: '-13px',
   },
+  body: {
+    width: '1000px',
+    display: 'flex',
+    margin: theme.spacing(0, 10),
+  },
+  sectionOne: {
+    width: '60%',
+    border: '1px solid #f00',
+  },
+  sectionTwo: {
+    width: '40%',
+    border: '1px solid #f00',
+  },
 }));
 
 export default useStyles;
