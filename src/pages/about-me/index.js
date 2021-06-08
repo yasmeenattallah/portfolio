@@ -9,10 +9,8 @@ const AboutMe = () => {
   return (
     <div className={classes.root}>
       <div className={classes.header}>
-        <Typography className={classes.title}>
-          About Me
-          <PersonOutlineOutlinedIcon className={classes.icon} />
-        </Typography>
+        <Typography className={classes.title}>About Me .</Typography>
+        <PersonOutlineOutlinedIcon className={classes.icon} />
       </div>
     </div>
   );
