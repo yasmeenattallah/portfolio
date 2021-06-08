@@ -2,19 +2,19 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 1166,
-    height: 622,
+    width: 1150,
+    height: 550,
   },
   header: {
     borderBottom: `1px dotted ${theme.palette.divider}`,
-    width: 800,
-    display: 'inline-flex',
+    width: 1000,
+    display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
     '& .MuiTypography-body1': {
       fontFamily: 'Kaushan Script',
     },
-    margin: theme.spacing(6, 7),
+    margin: theme.spacing(6, 10),
   },
   title: {
     color: '#00A3E1',
@@ -25,8 +25,7 @@ const useStyles = makeStyles((theme) => ({
   icon: {
     color: '#00A3E1',
     fontSize: '2rem',
-    display: 'flex',
-    justifyContent: 'flex-end',
+    justifyItems: 'flex-end',
   },
 }));
 
