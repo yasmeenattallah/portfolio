@@ -35,17 +35,22 @@ const useStyles = makeStyles((theme) => ({
   },
   sectionOne: {
     fontFamily: 'Arial',
-    fontWeight: 'bold',
     width: '60%',
-    border: '1px solid #f00',
+    lineHeight: 2.178,
   },
   sectionTwo: {
     width: '40%',
-    border: '1px solid #0f0',
     fontFamily: 'Arial',
+    marginLeft: '15px',
+    lineHeight: 2.5,
   },
   bodyTitle: {
     fontWeight: 'bold',
+    fontSize: '1.3rem',
+  },
+  info: {
+    fontWeight: 'bold',
+    textDecoration: 'underline #00A3E1  2px',
   },
 }));
 
