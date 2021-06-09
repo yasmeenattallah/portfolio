@@ -2,6 +2,14 @@ import React from 'react';
 
 import Typography from '@material-ui/core/Typography';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
+import ComputerIcon from '@material-ui/icons/Computer';
+import DevicesIcon from '@material-ui/icons/Devices';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+
 import useStyles from './style';
 
 const AboutMe = () => {
@@ -39,6 +47,35 @@ const AboutMe = () => {
           <span className={classes.info}> Freelancer</span> : Available <br />
         </Typography>
       </div>
+      <Typography className={classes.sectionThree}>
+        <span className={classes.servicesTitle}> SERVICES</span>
+        <List className={classes.list}>
+          <ListItem className={classes.listItem}>
+            <ListItemIcon>
+              <ComputerIcon className={classes.serviceIcon} />
+            </ListItemIcon>
+            <ListItemText className={classes.serviceText}>
+              Web Development
+            </ListItemText>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <ListItemIcon>
+              <VisibilityIcon className={classes.serviceIcon} />
+            </ListItemIcon>
+            <ListItemText className={classes.serviceText}>
+              Web Design
+            </ListItemText>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <ListItemIcon>
+              <DevicesIcon className={classes.serviceIcon} />
+            </ListItemIcon>
+            <ListItemText className={classes.serviceText}>
+              Responsive Design
+            </ListItemText>
+          </ListItem>
+        </List>
+      </Typography>
     </div>
   );
 };

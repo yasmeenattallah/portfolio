@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
   body: {
     width: '1000px',
     display: 'flex',
+    flexWrap: 'nowrap',
     margin: theme.spacing(0, 10),
     color: theme.props.MuiTypography.color,
   },
@@ -51,6 +52,58 @@ const useStyles = makeStyles((theme) => ({
   info: {
     fontWeight: 'bold',
     textDecoration: 'underline #00A3E1  2px',
+  },
+  sectionThree: {
+    marginTop: '43px',
+    fontFamily: 'Arial',
+    textAlign: 'center',
+  },
+  servicesTitle: {
+    '&::before ': {
+      content: '""',
+      position: 'absolute',
+      width: '2px',
+      height: '10px',
+      bottom: 3,
+      border: '1px solid #00A3E1',
+      boxSizing: 'border-box',
+    },
+    fontWeight: 'bold',
+    fontSize: '1.5rem',
+    marginBottom: '20px',
+    fontFamily: 'Roboto',
+    position: 'relative',
+    textDecoration: 'underline #00A3E1  2px',
+    letterSpacing: 1.5,
+    '&::after ': {
+      content: '""',
+      position: 'absolute',
+      width: '2px',
+      height: '10px',
+      bottom: 3,
+      border: '1px solid #00A3E1',
+      boxSizing: 'border-box',
+    },
+  },
+  list: {
+    display: 'flex',
+    justifyContent: 'space-around',
+  },
+  listItem: {
+    display: 'flex',
+    flexFlow: 'column nowrap',
+    textAlign: 'center',
+    width: 200,
+  },
+  serviceIcon: {
+    color: '#00A3E1',
+    fontSize: '40px',
+  },
+  serviceText: {
+    '& .MuiTypography-displayBlock': {
+      fontWeight: 'bold',
+      fontSize: '1.2rem',
+    },
   },
 }));
 
