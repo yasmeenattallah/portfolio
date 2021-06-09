@@ -36,7 +36,7 @@ const lightTheme = createMuiTheme({
       primary: '#FAFAFA',
       paper: '#ffffff',
     },
-    divider: '#DCDCDC',
+    divider: '#727272',
     action: {
       active: '#727272',
       hover: '#F0F0F0',
