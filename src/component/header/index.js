@@ -18,7 +18,13 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import FacebookIcon from '@material-ui/icons/Facebook';
 
 import useStyles from './style';
-import { Home, ContactPage, AboutMe, PortfolioPage } from '../../pages';
+import {
+  Home,
+  ContactPage,
+  AboutMe,
+  PortfolioPage,
+  ResumePage,
+} from '../../pages';
 import personal from '../../images/personal.jpg';
 
 const TabPanel = (props) => {
@@ -149,7 +155,7 @@ const Header = () => {
           <AboutMe />
         </TabPanel>
         <TabPanel value={value} index={3}>
-          RESUME
+          <ResumePage />
         </TabPanel>
         <TabPanel value={value} index={4}>
           <PortfolioPage />
