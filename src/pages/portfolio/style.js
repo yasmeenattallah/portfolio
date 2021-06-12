@@ -27,5 +27,20 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2.8rem',
     marginBottom: '-13px',
   },
+  body: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    marginTop: '90px',
+  },
+  linkImg: {
+    width: 400,
+    height: 300,
+  },
+  img: {
+    width: 400,
+    height: 300,
+    objectFit: 'cover',
+  },
 }));
 export default useStyles;
