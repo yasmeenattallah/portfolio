@@ -63,5 +63,8 @@ const useStyles = makeStyles((theme) => ({
   timelineDot: {
     backgroundColor: '#00A3E1',
   },
+  span: {
+    color: '#00A3E1',
+  },
 }));
 export default useStyles;

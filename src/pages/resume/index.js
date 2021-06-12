@@ -42,7 +42,11 @@ const ResumePage = () => {
         </Timeline>
         <Typography className={classes.sectionOne}>
           <span className={classes.bodyTitle}> Eduction</span> <br />
-          computer and communication Engineering
+          Bachelor&apos;s of Computer and Communication Engineering <br />
+          <span className={classes.span}>
+            Al-azher University, palestine, Gaza
+          </span>
+          <br /> GPA: 87.23%
         </Typography>
         <Typography className={classes.sectionTwo}>
           <span className={classes.bodyTitle}> Experience </span>
