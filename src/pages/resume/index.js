@@ -19,6 +19,7 @@ const ResumePage = () => {
         <Typography className={classes.title}>Resume .</Typography>
         <ListAltOutlinedIcon className={classes.icon} />
       </div>
+      <span className={classes.bodyTitle}> Eduction</span> <br />
       <div className={classes.body}>
         <Timeline align="right" className={classes.timeline}>
           <TimelineItem>
@@ -41,15 +42,39 @@ const ResumePage = () => {
           </TimelineItem>
         </Timeline>
         <Typography className={classes.sectionOne}>
-          <span className={classes.bodyTitle}> Eduction</span> <br />
           Bachelor&apos;s of Computer and Communication Engineering <br />
           <span className={classes.span}>
             Al-azher University, palestine, Gaza
           </span>
           <br /> GPA: 87.23%
         </Typography>
+        <Timeline align="right" className={classes.timeline}>
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineDot className={classes.timelineDot} />
+              <TimelineConnector className={classes.timelineDot} />
+            </TimelineSeparator>
+            <TimelineContent className={classes.timelineContent}>
+              Oct,2020
+            </TimelineContent>
+          </TimelineItem>
+          <TimelineItem>
+            <TimelineSeparator>
+              <TimelineDot className={classes.timelineDot} />
+              <TimelineConnector className={classes.timelineDot} />
+            </TimelineSeparator>
+            <TimelineContent className={classes.timelineContent}>
+              May,2021
+            </TimelineContent>
+          </TimelineItem>
+        </Timeline>
         <Typography className={classes.sectionTwo}>
-          <span className={classes.bodyTitle}> Experience </span>
+          Code Academy Program <br />
+          <span className={classes.span}>
+            Gaza Sky Geeks Company, palestine, Gaza
+          </span>
+          <br />
+          javascript full-stack developer
         </Typography>
       </div>
     </div>

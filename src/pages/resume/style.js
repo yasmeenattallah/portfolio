@@ -36,24 +36,26 @@ const useStyles = makeStyles((theme) => ({
   },
   sectionOne: {
     fontFamily: 'Arial',
-    width: '50%',
+    width: '70%',
     lineHeight: 2.178,
+    marginTop: '60px',
   },
   sectionTwo: {
     width: '50%',
     fontFamily: 'Arial',
     lineHeight: 2.5,
+    marginTop: '60px',
   },
   bodyTitle: {
     fontSize: '1.6rem',
     letterSpacing: 1,
     textTransform: 'uppercase',
-    position: 'relative',
     fontFamily: 'Kaushan Script',
-    textDecoration: 'underline #00A3E1  2px',
+    // textDecoration: 'underline #00A3E1  2px',
+    marginLeft: '120px',
   },
   timeline: {
-    marginLeft: '-80px',
+    marginLeft: '-120px',
     marginTop: '50px',
   },
   timelineContent: {
