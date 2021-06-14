@@ -77,6 +77,15 @@ const ResumePage = () => {
           javascript full-stack developer
         </Typography>
       </div>
+      <Typography className={classes.bodyTitle}> Skills</Typography>
+      <div className={classes.skills}>
+        <Typography className={classes.sectionThree}>
+          <span className={classes.skillsTitle}> Coding</span>,
+        </Typography>
+        <Typography className={classes.sectionFour}>
+          <span className={classes.skillsTitle}> Technology</span>
+        </Typography>
+      </div>
     </div>
   );
 };

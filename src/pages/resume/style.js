@@ -51,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 1,
     textTransform: 'uppercase',
     fontFamily: 'Kaushan Script',
-    // textDecoration: 'underline #00A3E1  2px',
     marginLeft: '120px',
   },
   timeline: {
@@ -67,6 +66,30 @@ const useStyles = makeStyles((theme) => ({
   },
   span: {
     color: '#00A3E1',
+  },
+  skills: {
+    width: '1160px',
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    border: '2px solid #f0f',
+  },
+  sectionThree: {
+    width: '40%',
+    border: '2px solid #ff0',
+    marginTop: '20px',
+  },
+  sectionFour: {
+    width: '40%',
+    border: '2px solid #00f',
+    marginTop: '20px',
+  },
+  skillsTitle: {
+    textAlign: 'center',
+    fontFamily: 'arial',
+    fontSize: '1.2rem',
+    border: '2px solid #0f0',
+    justifyItems: 'center',
   },
 }));
 export default useStyles;
