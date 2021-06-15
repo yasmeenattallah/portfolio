@@ -1,3 +1,3 @@
-import Header from './header';
+import Header from './tabPanel';
 
 export default Header;
