@@ -11,7 +11,7 @@ const darkTheme = createMuiTheme({
     action: {
       active: '#ffffff',
       hover: '#404040',
-      selected: '#515151',
+      selected: '#404040',
       disabled: '#6F6F6F',
       disabledBackground: '#303030',
     },
