@@ -49,10 +49,11 @@ const useStyles = makeStyles((theme) => ({
   bodyTitle: {
     fontSize: '1.6rem',
     letterSpacing: 1,
-    textTransform: 'uppercase',
-    fontFamily: 'Kaushan Script',
+    fontFamily: 'serif',
     marginLeft: '120px',
     borderBottom: '2px solid #00A3E1',
+    marginTop: '30px',
+    display: 'inline-block',
   },
   timeline: {
     marginLeft: '-120px',
@@ -69,28 +70,21 @@ const useStyles = makeStyles((theme) => ({
     color: '#00A3E1',
   },
   skills: {
-    width: '1160px',
+    marginTop: '30px',
     display: 'flex',
     justifyContent: 'space-around',
-    alignItems: 'center',
-    border: '2px solid #f0f',
+    flexWrap: 'wrap',
+    marginLeft: '40px',
+    width: 1100,
   },
-  sectionThree: {
-    width: '40%',
-    border: '2px solid #ff0',
-    marginTop: '20px',
-  },
-  sectionFour: {
-    width: '40%',
-    border: '2px solid #00f',
-    marginTop: '20px',
-  },
-  skillsTitle: {
-    textAlign: 'center',
+  skillsIcon: {
+    width: '200px',
+    height: '100px',
+    display: 'flex',
+    flexDirection: 'column',
     fontFamily: 'arial',
-    fontSize: '1.2rem',
-    border: '2px solid #0f0',
-    justifyItems: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 }));
 export default useStyles;

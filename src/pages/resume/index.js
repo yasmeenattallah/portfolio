@@ -8,8 +8,9 @@ import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
-import Container from '@material-ui/core/Container';
+// import Container from '@material-ui/core/Container';
 import Avatar from '@material-ui/core/Avatar';
+import Box from '@material-ui/core/Box';
 
 import useStyles from './style';
 import html from '../../images/html.png';
@@ -92,18 +93,48 @@ const ResumePage = () => {
       <Typography className={classes.bodyTitle}>
         Skills,Tools and Technologies
       </Typography>
-      <Container className={classes.skills}>
-        <Avatar src={react} alt="react" />
-        <Avatar src={js} alt="js" />
-        <Avatar src={nodejs} alt="nodejs" />
-        <Avatar src={postgresql} alt="postgresql" />
-        <Avatar src={html} alt="html" />
-        <Avatar src={css} alt="css" />
-        <Avatar src={material} alt="material" />
-        <Avatar src={git} alt="git" />
-        <Avatar src={github} alt="github" />
-        <Avatar src={heroku} alt="heroku" />
-      </Container>
+      <div className={classes.skills}>
+        <Box className={classes.skillsIcon}>
+          <Avatar src={react} alt="react" />
+          React
+        </Box>
+        <Box className={classes.skillsIcon}>
+          <Avatar src={js} alt="js" />
+          Javascript
+        </Box>
+        <Box className={classes.skillsIcon}>
+          <Avatar src={nodejs} alt="nodejs" />
+          NodeJs
+        </Box>
+        <Box className={classes.skillsIcon}>
+          <Avatar src={postgresql} alt="postgresql" />
+          Postgresql
+        </Box>
+        <Box className={classes.skillsIcon}>
+          <Avatar src={html} alt="html" />
+          Html
+        </Box>
+        <Box className={classes.skillsIcon}>
+          <Avatar src={css} alt="css" />
+          Css
+        </Box>
+        <Box className={classes.skillsIcon}>
+          <Avatar src={material} alt="material" />
+          Material-UI
+        </Box>
+        <Box className={classes.skillsIcon}>
+          <Avatar src={git} alt="git" />
+          Git
+        </Box>
+        <Box className={classes.skillsIcon}>
+          <Avatar src={github} alt="github" />
+          GitHub
+        </Box>
+        <Box className={classes.skillsIcon}>
+          <Avatar src={heroku} alt="heroku" />
+          Heroku
+        </Box>
+      </div>
     </div>
   );
 };
