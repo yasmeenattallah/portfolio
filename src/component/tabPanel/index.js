@@ -148,6 +148,9 @@ const Header = () => {
         </Tabs>
       </AppBar>
       <div>
+        <TabPanel value={value} index={0}>
+          <Home />
+        </TabPanel>
         <TabPanel value={value} index={1}>
           <Home />
         </TabPanel>

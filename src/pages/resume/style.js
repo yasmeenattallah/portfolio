@@ -2,8 +2,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 1100,
-    height: 570,
+    width: 1166,
+    height: 622,
+    overflowY: 'scroll',
+    overflowX: 'hidden',
   },
   header: {
     borderBottom: `1px dotted ${theme.palette.divider}`,
