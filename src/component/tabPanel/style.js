@@ -43,7 +43,10 @@ const useStyles = makeStyles((theme) => ({
     '& .PrivateTabIndicator-colorSecondary-1137': {
       backgroundColor: '#303030',
     },
-    '$ .PrivateTabIndicator-colorSecondary-20': {
+    '& .PrivateTabIndicator-colorSecondary-20': {
+      backgroundColor: '#303030',
+    },
+    '& .PrivateTabIndicator-colorSecondary-15': {
       backgroundColor: '#303030',
     },
     '& .MuiTab-labelIcon': {
