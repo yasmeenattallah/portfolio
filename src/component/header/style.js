@@ -40,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
     '& .PrivateTabIndicator-colorSecondary-10': {
       backgroundColor: '#303030',
     },
+    '& .PrivateTabIndicator-colorSecondary-1137': {
+      backgroundColor: '#303030',
+    },
     '& .MuiTab-labelIcon': {
       fontFamily: 'Arial',
       minHeight: 55,
