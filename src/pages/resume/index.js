@@ -8,8 +8,20 @@ import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
+import Container from '@material-ui/core/Container';
+import Avatar from '@material-ui/core/Avatar';
 
 import useStyles from './style';
+import html from '../../images/html.png';
+import css from '../../images/css.png';
+import js from '../../images/js.png';
+import react from '../../images/react.png';
+import git from '../../images/git.png';
+import github from '../../images/github.png';
+import heroku from '../../images/heroku.png';
+import material from '../../images/material.png';
+import nodejs from '../../images/nodejs.png';
+import postgresql from '../../images/postgresql.png';
 
 const ResumePage = () => {
   const classes = useStyles();
@@ -77,15 +89,21 @@ const ResumePage = () => {
           javascript full-stack developer
         </Typography>
       </div>
-      <Typography className={classes.bodyTitle}> Skills</Typography>
-      <div className={classes.skills}>
-        <Typography className={classes.sectionThree}>
-          <span className={classes.skillsTitle}> Coding</span>,
-        </Typography>
-        <Typography className={classes.sectionFour}>
-          <span className={classes.skillsTitle}> Technology</span>
-        </Typography>
-      </div>
+      <Typography className={classes.bodyTitle}>
+        Skills,Tools and Technologies
+      </Typography>
+      <Container className={classes.skills}>
+        <Avatar src={react} alt="react" />
+        <Avatar src={js} alt="js" />
+        <Avatar src={nodejs} alt="nodejs" />
+        <Avatar src={postgresql} alt="postgresql" />
+        <Avatar src={html} alt="html" />
+        <Avatar src={css} alt="css" />
+        <Avatar src={material} alt="material" />
+        <Avatar src={git} alt="git" />
+        <Avatar src={github} alt="github" />
+        <Avatar src={heroku} alt="heroku" />
+      </Container>
     </div>
   );
 };

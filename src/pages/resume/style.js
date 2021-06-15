@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     textTransform: 'uppercase',
     fontFamily: 'Kaushan Script',
     marginLeft: '120px',
+    borderBottom: '2px solid #00A3E1',
   },
   timeline: {
     marginLeft: '-120px',
