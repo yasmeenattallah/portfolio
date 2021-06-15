@@ -85,6 +85,9 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'arial',
     justifyContent: 'center',
     alignItems: 'center',
+    '&:hover': {
+      boxShadow: `-7px -7px 10px ${theme.palette.action.selected} , 5px 5px 10px ${theme.palette.action.selected}`,
+    },
   },
 }));
 export default useStyles;

@@ -8,7 +8,6 @@ import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
 import TimelineConnector from '@material-ui/lab/TimelineConnector';
 import TimelineContent from '@material-ui/lab/TimelineContent';
 import TimelineDot from '@material-ui/lab/TimelineDot';
-// import Container from '@material-ui/core/Container';
 import Avatar from '@material-ui/core/Avatar';
 import Box from '@material-ui/core/Box';
 
@@ -21,7 +20,7 @@ import git from '../../images/git.png';
 import github from '../../images/github.png';
 import heroku from '../../images/heroku.png';
 import material from '../../images/material.png';
-import nodejs from '../../images/nodejs.png';
+import nodejs from '../../images/nodejs.jpg';
 import postgresql from '../../images/postgresql.png';
 
 const ResumePage = () => {
@@ -104,11 +103,11 @@ const ResumePage = () => {
         </Box>
         <Box className={classes.skillsIcon}>
           <Avatar src={nodejs} alt="nodejs" />
-          NodeJs
+          Node Js
         </Box>
         <Box className={classes.skillsIcon}>
           <Avatar src={postgresql} alt="postgresql" />
-          Postgresql
+          PostgreSQL
         </Box>
         <Box className={classes.skillsIcon}>
           <Avatar src={html} alt="html" />
