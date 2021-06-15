@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '-13px',
   },
   body: {
-    width: '1000px',
+    width: '950px',
     display: 'flex',
     flexWrap: 'nowrap',
     margin: theme.spacing(0, 20),
