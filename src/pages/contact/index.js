@@ -14,10 +14,12 @@ import validationSchema from '../../utils/contactValidation';
 
 const ContactPage = () => {
   const classes = useStyles();
-  const [username, setName] = useState();
-  const [userEmail, setEmail] = useState();
-  const [message, setMessage] = useState();
+  const [username, setName] = useState('');
+  const [userEmail, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const [err, setError] = useState(false);
+  const [sendSuccess, setSendSuccess] = useState('');
+  const [sendFail, setSendFail] = useState('');
 
   const clear = () => {
     setName('');
@@ -53,7 +55,7 @@ const ContactPage = () => {
         abortEarly: false,
       });
       clear();
-      await emailjs
+      emailjs
         .send(
           process.env.REACT_APP_SERVICE_ID,
           process.env.REACT_APP_TEMPLATE_ID,
@@ -62,14 +64,12 @@ const ContactPage = () => {
         )
         .then(
           (result) => {
-            <Alert severity="success">
-              Message Sent, We will get back to you shortly,{result.text}
-            </Alert>;
+            setSendSuccess(
+              `  Message Sent, We will get back to you shortly,${result.text}`
+            );
           },
           (error) => {
-            <Alert severity="error">
-              An error occurred, Please try again,{error.text}
-            </Alert>;
+            setSendFail(` An error occurred, Please try again,${error.text}`);
           }
         );
     } catch (er) {
@@ -114,6 +114,16 @@ const ContactPage = () => {
         {err && (
           <Alert severity="error" className={classes.alert}>
             {err}
+          </Alert>
+        )}
+        {sendSuccess && (
+          <Alert severity="success" className={classes.alert}>
+            {sendSuccess}
+          </Alert>
+        )}
+        {sendFail && (
+          <Alert severity="error" className={classes.alert}>
+            {sendFail}
           </Alert>
         )}
         <Button
