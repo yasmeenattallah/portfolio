@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 import Typography from '@material-ui/core/Typography';
 import ListAltOutlinedIcon from '@material-ui/icons/ListAltOutlined';
@@ -23,6 +24,8 @@ import material from '../../images/material.png';
 import nodejs from '../../images/nodejs.jpg';
 import postgresql from '../../images/postgresql.png';
 
+// import yasmeenattallah from '../../files/yasmeenattallah.pdf';
+
 const ResumePage = () => {
   const classes = useStyles();
   return (
@@ -31,6 +34,11 @@ const ResumePage = () => {
         <Typography className={classes.title}>Resume .</Typography>
         <ListAltOutlinedIcon className={classes.icon} />
       </div>
+      <Router>
+        <Link to="/files/yasmeenattallah.pdf" target="_blank" download>
+          Download Resume
+        </Link>
+      </Router>
       <span className={classes.bodyTitle}> Eduction</span> <br />
       <div className={classes.body}>
         <Timeline align="right" className={classes.timeline}>
