@@ -7,6 +7,7 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Alert from '@material-ui/lab/Alert';
+import Snackbar from '@material-ui/core/Snackbar';
 
 import useStyles from './style';
 
@@ -20,12 +21,19 @@ const ContactPage = () => {
   const [err, setError] = useState(false);
   const [sendSuccess, setSendSuccess] = useState('');
   const [sendFail, setSendFail] = useState('');
+  const [open, setOpen] = useState(false);
 
   const clear = () => {
     setName('');
     setEmail('');
     setMessage('');
     setError(null);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setOpen(false);
   };
   const handelChange = ({ target: { name, value } }) => {
     switch (name) {
@@ -67,9 +75,11 @@ const ContactPage = () => {
             setSendSuccess(
               `  Message Sent, We will get back to you shortly,${result.text}`
             );
+            setOpen(true);
           },
           (error) => {
             setSendFail(` An error occurred, Please try again,${error.text}`);
+            setOpen(true);
           }
         );
     } catch (er) {
@@ -117,14 +127,18 @@ const ContactPage = () => {
           </Alert>
         )}
         {sendSuccess && (
-          <Alert severity="success" className={classes.alert}>
-            {sendSuccess}
-          </Alert>
+          <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+            <Alert onClose={handleClose} severity="success">
+              {sendSuccess}
+            </Alert>
+          </Snackbar>
         )}
         {sendFail && (
-          <Alert severity="error" className={classes.alert}>
-            {sendFail}
-          </Alert>
+          <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+            <Alert severity="error" className={classes.alert}>
+              {sendFail}
+            </Alert>
+          </Snackbar>
         )}
         <Button
           variant="outlined"
