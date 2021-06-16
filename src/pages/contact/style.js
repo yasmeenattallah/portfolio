@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 1166,
-    height: 622,
+    height: 550,
   },
   header: {
     borderBottom: `1px dotted ${theme.palette.divider}`,
