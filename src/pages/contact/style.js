@@ -79,5 +79,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bolder',
     fontSize: '1rem',
   },
+  alert: {
+    width: 750,
+  },
 }));
 export default useStyles;

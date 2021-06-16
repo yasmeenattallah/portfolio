@@ -111,7 +111,11 @@ const ContactPage = () => {
           value={message}
           onChange={handelChange}
         />
-        {err && <Alert severity="error">{err}</Alert>}
+        {err && (
+          <Alert severity="error" className={classes.alert}>
+            {err}
+          </Alert>
+        )}
         <Button
           variant="outlined"
           color="primary"
