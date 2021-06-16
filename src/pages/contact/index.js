@@ -1,19 +1,30 @@
 import React, { useState } from 'react';
 
+import emailjs from 'emailjs-com';
+
 import Typography from '@material-ui/core/Typography';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Alert from '@material-ui/lab/Alert';
-import emailjs from 'emailjs-com';
+
 import useStyles from './style';
+
+import validationSchema from '../../utils/contactValidation';
 
 const ContactPage = () => {
   const classes = useStyles();
   const [username, setName] = useState();
-  const [email, setEmail] = useState();
+  const [userEmail, setEmail] = useState();
   const [message, setMessage] = useState();
+  const [err, setError] = useState(false);
 
+  const clear = () => {
+    setName('');
+    setEmail('');
+    setMessage('');
+    setError(null);
+  };
   const handelChange = ({ target: { name, value } }) => {
     switch (name) {
       case 'username':
@@ -30,35 +41,43 @@ const ContactPage = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const templateParams = {
-      name: 'James',
-      notes: 'Check this out!',
-    };
-    emailjs
-      .send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        templateParams,
-        process.env.REACT_APP_USER_ID
-      )
-      .then(
-        (result) => {
-          <Alert severity="success">
-            Message Sent, We will get back to you shortly,{result.text}
-          </Alert>;
-        },
-        (error) => {
-          <Alert severity="error">
-            An error occurred, Please try again,{error.text}
-          </Alert>;
-        }
-      );
+  const handleSubmit = async (e) => {
+    try {
+      e.preventDefault();
+      const templateParams = {
+        username,
+        userEmail,
+        message,
+      };
+      await validationSchema.validate(templateParams, {
+        abortEarly: false,
+      });
+      clear();
+      await emailjs
+        .send(
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID,
+          templateParams,
+          process.env.REACT_APP_USER_ID
+        )
+        .then(
+          (result) => {
+            <Alert severity="success">
+              Message Sent, We will get back to you shortly,{result.text}
+            </Alert>;
+          },
+          (error) => {
+            <Alert severity="error">
+              An error occurred, Please try again,{error.text}
+            </Alert>;
+          }
+        );
+    } catch (er) {
+      setError(er.response ? er.response.data.message : er.errors[0]);
+    }
   };
   return (
     <div className={classes.root}>
-      {console.log(username, 1, email, 2, message, 3)}
       <div className={classes.header}>
         <Typography className={classes.title}>Contact Me</Typography>
         <MailOutlineIcon className={classes.icon} />
@@ -78,7 +97,7 @@ const ContactPage = () => {
           label="Email"
           className={classes.input}
           type="email"
-          value={email}
+          value={userEmail}
           name="email"
           onChange={handelChange}
         />
@@ -92,6 +111,7 @@ const ContactPage = () => {
           value={message}
           onChange={handelChange}
         />
+        {err && <Alert severity="error">{err}</Alert>}
         <Button
           variant="outlined"
           color="primary"
