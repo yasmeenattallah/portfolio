@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 1166,
-    height: 622,
+    height: 550,
   },
   header: {
     borderBottom: `1px dotted ${theme.palette.divider}`,
@@ -53,9 +53,6 @@ const useStyles = makeStyles((theme) => ({
       width: 350,
       marginBottom: 30,
     },
-    '& .MuiOutlinedInput-input:-webkit-autofill': {
-      boxShadow: ' 0 0 0 100px black inset',
-    },
     '& .MuiOutlinedInput-multiline': {
       width: 750,
     },
@@ -81,6 +78,9 @@ const useStyles = makeStyles((theme) => ({
     color: '#00A3E1',
     fontWeight: 'bolder',
     fontSize: '1rem',
+  },
+  alert: {
+    width: 750,
   },
 }));
 export default useStyles;
