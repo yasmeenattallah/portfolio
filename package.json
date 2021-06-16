@@ -15,7 +15,7 @@
     "@testing-library/user-event": "^12.6.2",
     "babel-eslint": "^10.1.0",
     "dotenv": "^8.2.0",
-    "env": "^0.0.2",
+    "emailjs-com": "^3.1.0",
     "eslint": "^7.27.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
