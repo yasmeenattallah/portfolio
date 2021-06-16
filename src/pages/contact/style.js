@@ -53,9 +53,6 @@ const useStyles = makeStyles((theme) => ({
       width: 350,
       marginBottom: 30,
     },
-    '& .MuiOutlinedInput-input:-webkit-autofill': {
-      boxShadow: ' 0 0 0 100px black inset',
-    },
     '& .MuiOutlinedInput-multiline': {
       width: 750,
     },
