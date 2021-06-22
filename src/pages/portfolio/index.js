@@ -67,14 +67,6 @@ const PortfolioPage = () => {
             />
           </GridListTile>
         </GridList>
-        {/* 
-           <Link
-          href="https://github.com/yasmeenattallah/beauty-salon"
-          target="_blank"
-          className={classes.linkImg}
-        >
-          <img src={beautySalon} alt="BeautySalon" className={classes.img} />
-        </Link> */}
       </div>
     </div>
   );
