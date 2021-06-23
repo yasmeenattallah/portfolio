@@ -33,13 +33,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     marginTop: '90px',
   },
-  linkImg: {
-    width: 400,
-    height: 300,
-  },
+
   img: {
     width: 400,
-    height: 300,
+    height: 400,
     objectFit: 'cover',
   },
 }));
