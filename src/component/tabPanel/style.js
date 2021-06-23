@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   personalImg: {
     width: '100%',
     height: '160px',
-    opacity: 0.7,
+    objectFit: 'cover',
   },
   personalText: {
     position: 'absolute',

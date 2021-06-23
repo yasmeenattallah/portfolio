@@ -25,7 +25,8 @@ import {
   PortfolioPage,
   ResumePage,
 } from '../../pages';
-import personal from '../../images/personal.jpg';
+
+import yasmeen from '../../images/yasmeen.png';
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -51,17 +52,6 @@ TabPanel.propTypes = {
   index: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 };
-
-// const LinkTab = (props) => (
-//   <Tab
-//     component="a"
-//     onClick={(event) => {
-//       event.preventDefault();
-//     }}
-//     {...props}
-//   />
-// );
-
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
@@ -86,11 +76,7 @@ const Header = () => {
           className={classes.tabs}
         >
           <div {...a11yProps(0)} className={classes.personalContainer}>
-            <img
-              src={personal}
-              alt="personal"
-              className={classes.personalImg}
-            />
+            <img src={yasmeen} alt="personal" className={classes.personalImg} />
             <Typography className={classes.personalText}>
               YASMEEN ATTALLAH
             </Typography>
