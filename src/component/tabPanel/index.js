@@ -25,7 +25,8 @@ import {
   PortfolioPage,
   ResumePage,
 } from '../../pages';
-import personal from '../../images/personal.jpg';
+
+import yasmeen from '../../images/yasmeen.png';
 
 const TabPanel = (props) => {
   const { children, value, index, ...other } = props;
@@ -86,11 +87,7 @@ const Header = () => {
           className={classes.tabs}
         >
           <div {...a11yProps(0)} className={classes.personalContainer}>
-            <img
-              src={personal}
-              alt="personal"
-              className={classes.personalImg}
-            />
+            <img src={yasmeen} alt="personal" className={classes.personalImg} />
             <Typography className={classes.personalText}>
               YASMEEN ATTALLAH
             </Typography>
