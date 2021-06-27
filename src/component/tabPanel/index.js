@@ -52,15 +52,15 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-// const LinkTab = (props) => (
-//   <Tab
-//     component="a"
-//     onClick={(event) => {
-//       event.preventDefault();
-//     }}
-//     {...props}
-//   />
-// );
+const LinkTab = (props) => (
+  <Tab
+    component="a"
+    onClick={(event) => {
+      event.preventDefault();
+    }}
+    {...props}
+  />
+);
 
 function a11yProps(index) {
   return {
@@ -95,31 +95,31 @@ const Header = () => {
               YASMEEN ATTALLAH
             </Typography>
           </div>
-          <Tab
+          <LinkTab
             label="HOME"
             href="/home"
             {...a11yProps(1)}
             icon={<HomeOutlinedIcon />}
           />
-          <Tab
+          <LinkTab
             label="ABOUT ME"
             href="/about"
             icon={<PersonOutlineOutlinedIcon />}
             {...a11yProps(2)}
           />
-          <Tab
+          <LinkTab
             label="RESUME"
             href="/resume"
             icon={<ListAltOutlinedIcon />}
             {...a11yProps(3)}
           />
-          <Tab
+          <LinkTab
             label="PORTFOLIO"
             href="/portfolio"
             icon={<CardTravelOutlinedIcon />}
             {...a11yProps(4)}
           />
-          <Tab
+          <LinkTab
             label="CONTACT"
             href="/contact"
             icon={<EmailOutlinedIcon />}
