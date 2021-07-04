@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
+import { useTheme } from '@material-ui/core/styles';
+
 import Drawer from '@material-ui/core/Drawer';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -12,6 +13,8 @@ import Box from '@material-ui/core/Box';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Link from '@material-ui/core/Link';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
@@ -72,6 +75,7 @@ const a11yProps = (index) => ({
 
 const PersistentDrawerLeft = () => {
   const classes = useStyles();
+  const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(0);
   const handleChange = (event, newValue) => {
@@ -80,10 +84,11 @@ const PersistentDrawerLeft = () => {
   const handleDrawerOpen = () => {
     setOpen(true);
   };
-
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
   return (
     <div className={classes.mobileRoot}>
-      <CssBaseline />
       <AppBar
         position="fixed"
         className={clsx(classes.appBar, {
@@ -111,7 +116,16 @@ const PersistentDrawerLeft = () => {
           paper: classes.drawerPaper,
         }}
       >
-        <AppBar position="static" color="primary">
+        <div className={classes.drawerHeader}>
+          <IconButton onClick={handleDrawerClose}>
+            {theme.direction === 'ltr' ? (
+              <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
+            )}
+          </IconButton>
+        </div>
+        <AppBar position="static">
           <Tabs
             orientation="vertical"
             variant="scrollable"
@@ -183,24 +197,30 @@ const PersistentDrawerLeft = () => {
           </Tabs>
         </AppBar>
       </Drawer>
-      <TabPanel value={value} index={0}>
-        <Home />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Home />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <AboutMe />
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <ResumePage />
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <PortfolioPage />
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        <ContactPage />
-      </TabPanel>
+      <div
+        className={clsx(classes.content, {
+          [classes.contentShift]: open,
+        })}
+      >
+        <TabPanel value={value} index={0}>
+          <Home />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <Home />
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <AboutMe />
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          <ResumePage />
+        </TabPanel>
+        <TabPanel value={value} index={4}>
+          <PortfolioPage />
+        </TabPanel>
+        <TabPanel value={value} index={5}>
+          <ContactPage />
+        </TabPanel>
+      </div>
     </div>
   );
 };
