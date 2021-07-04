@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(-5, 0, 0, 0),
     flexGrow: 1,
     display: 'flex',
-    height: 622,
+    height: 655,
     width: 200,
     '& .MuiBox-root': {
       padding: 0,
