@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     opacity: 0.8,
     width: 1166,
-    height: 622,
+    height: 655,
     position: 'absolute',
     transformStyle: 'preserve-3d',
   },
