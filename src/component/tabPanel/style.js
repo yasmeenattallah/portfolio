@@ -1,11 +1,12 @@
 import { makeStyles } from '@material-ui/core/styles';
 
+const drawerWidth = 200;
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: theme.spacing(-5, 0, 0, 0),
     flexGrow: 1,
     display: 'flex',
-    height: 622,
+    height: 655,
     width: 200,
     '& .MuiBox-root': {
       padding: 0,
@@ -51,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     },
     '& .MuiTab-labelIcon': {
       fontFamily: 'Arial',
-      minHeight: 55,
+      minHeight: 62,
     },
     '& .MuiTab-root': {
       borderBottom: '1px solid #202020',
@@ -82,6 +83,67 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(0, 1, 0, 1),
       fontSize: 19,
     },
+  },
+  //
+  mobileRoot: {
+    display: 'flex',
+    '& .MuiToolbar-regular': {
+      backgroundColor: theme.palette.background.primary,
+      color: theme.props.MuiTypography.color,
+      minHeight: '0px',
+    },
+    '& .MuiAppBar-colorPrimary': {
+      background: '#303030',
+    },
+  },
+  appBar: {
+    transition: theme.transitions.create(['margin', 'width'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  appBarShift: {
+    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: drawerWidth,
+    transition: theme.transitions.create(['margin', 'width'], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  hide: {
+    display: 'none',
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  drawerHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: theme.spacing(0, 1),
+    justifyContent: 'flex-end',
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing(3),
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    marginLeft: -drawerWidth,
+  },
+  contentShift: {
+    transition: theme.transitions.create('margin', {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+    marginLeft: 0,
   },
 }));
 export default useStyles;
