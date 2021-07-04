@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 const useStyles = makeStyles((theme) => ({
   root: {
     margin: theme.spacing(-5, 0, 0, 0),
@@ -90,9 +90,7 @@ const useStyles = makeStyles((theme) => ({
     '& .MuiToolbar-regular': {
       backgroundColor: theme.palette.background.primary,
       color: theme.props.MuiTypography.color,
-      minHeight: '10px',
-      // width: '50px',
-      // border: '10px solid #f0f',
+      minHeight: '0px',
     },
     '& .MuiAppBar-colorPrimary': {
       background: '#303030',
@@ -125,17 +123,15 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     width: drawerWidth,
   },
-  // drawerHeader: {
-  //   display: 'flex',
-  //   alignItems: 'center',
-  //   padding: theme.spacing(0, 1),
-  //   // necessary for content to be below app bar
-  //   ...theme.mixins.toolbar,
-  //   justifyContent: 'flex-end',
-  // },
+  drawerHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: theme.spacing(0, 1),
+    justifyContent: 'flex-end',
+  },
   content: {
     flexGrow: 1,
-    // padding: theme.spacing(3),
+    padding: theme.spacing(3),
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
