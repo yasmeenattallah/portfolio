@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     },
     '& .MuiTab-labelIcon': {
       fontFamily: 'Arial',
-      minHeight: 55,
+      minHeight: 62,
     },
     '& .MuiTab-root': {
       borderBottom: '1px solid #202020',
