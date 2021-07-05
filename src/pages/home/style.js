@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
     height: 655,
     position: 'absolute',
     transformStyle: 'preserve-3d',
+    [theme.breakpoints.down('sm')]: {
+      padding: 0,
+    },
   },
   typo: {
     textAlign: 'center',
@@ -20,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.divider,
   },
   typo1: {
-    // width: 500,
     fontSize: '2rem',
     fontWeight: 'bold',
     opacity: 1,
