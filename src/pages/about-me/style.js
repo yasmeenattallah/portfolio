@@ -4,10 +4,21 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: 1150,
     height: 550,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      height: '100%',
+      overFlowX: 'scroll',
+      top: 0,
+      left: 0,
+    },
   },
   header: {
     borderBottom: `1px dotted ${theme.palette.divider}`,
     width: 1000,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      margin: theme.spacing(0, 0),
+    },
     '& .MuiTypography-body1': {
       display: 'inline-flex',
       justifyContent: 'flex-start',
@@ -20,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 1.5,
     fontSize: '2rem',
     width: 900,
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+    },
   },
 
   icon: {
@@ -33,17 +47,31 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'nowrap',
     margin: theme.spacing(0, 10),
     color: theme.props.MuiTypography.color,
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      margin: 0,
+      width: '100%',
+      overFlowX: 'hidden',
+    },
   },
   sectionOne: {
     fontFamily: 'Arial',
     width: '60%',
     lineHeight: 2.178,
+    [theme.breakpoints.down('sm')]: {
+      margin: 0,
+      width: '100%',
+    },
   },
   sectionTwo: {
     width: '40%',
     fontFamily: 'Arial',
     marginLeft: '15px',
     lineHeight: 2.5,
+    [theme.breakpoints.down('sm')]: {
+      margin: 0,
+      width: '100%',
+    },
   },
   bodyTitle: {
     fontWeight: 'bold',
@@ -57,6 +85,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '43px',
     fontFamily: 'Arial',
     textAlign: 'center',
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'left',
+    },
   },
   servicesTitle: {
     '&::before ': {
@@ -88,6 +119,10 @@ const useStyles = makeStyles((theme) => ({
   list: {
     display: 'flex',
     justifyContent: 'space-around',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
   },
   listItem: {
     display: 'flex',
