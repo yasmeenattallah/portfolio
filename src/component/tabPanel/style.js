@@ -119,6 +119,9 @@ const useStyles = makeStyles((theme) => ({
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    '& .MuiDrawer-paper': {
+      height: 655,
+    },
   },
   drawerPaper: {
     width: drawerWidth,
