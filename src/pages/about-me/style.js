@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     height: 550,
     [theme.breakpoints.down('sm')]: {
       width: '100%',
-      height: 655,
+      height: '100%',
       top: 0,
       left: 0,
     },
@@ -39,9 +39,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#00A3E1',
     fontSize: '2.8rem',
     marginBottom: '-13px',
-    [theme.breakpoints.down('sm')]: {
-      // marginBottom: 0,
-    },
   },
   body: {
     width: '1000px',
@@ -53,18 +50,27 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'column',
       margin: 0,
       width: '100%',
+      overFlowX: 'hidden',
     },
   },
   sectionOne: {
     fontFamily: 'Arial',
     width: '60%',
     lineHeight: 2.178,
+    [theme.breakpoints.down('sm')]: {
+      margin: 0,
+      width: '100%',
+    },
   },
   sectionTwo: {
     width: '40%',
     fontFamily: 'Arial',
     marginLeft: '15px',
     lineHeight: 2.5,
+    [theme.breakpoints.down('sm')]: {
+      margin: 0,
+      width: '100%',
+    },
   },
   bodyTitle: {
     fontWeight: 'bold',
@@ -78,6 +84,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '43px',
     fontFamily: 'Arial',
     textAlign: 'center',
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'left',
+    },
   },
   servicesTitle: {
     '&::before ': {
@@ -109,6 +118,10 @@ const useStyles = makeStyles((theme) => ({
   list: {
     display: 'flex',
     justifyContent: 'space-around',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+    },
   },
   listItem: {
     display: 'flex',
