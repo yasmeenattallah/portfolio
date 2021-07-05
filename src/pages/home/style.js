@@ -13,9 +13,8 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     transformStyle: 'preserve-3d',
     [theme.breakpoints.down('sm')]: {
-      // padding: 0,
-      width: 500,
-      height: 300,
+      width: '100%',
+      height: 655,
       top: 0,
       left: 0,
     },
