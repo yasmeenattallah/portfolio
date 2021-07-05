@@ -105,6 +105,9 @@ const PersistentDrawerLeft = () => {
           >
             <MenuIcon />
           </IconButton>
+          <Typography variant="h6" noWrap>
+            YASMEEN ATTALLAH
+          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
