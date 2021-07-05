@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       width: '100%',
       height: '100%',
+      overFlowX: 'scroll',
       top: 0,
       left: 0,
     },
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: `1px dotted ${theme.palette.divider}`,
     width: 1000,
     [theme.breakpoints.down('sm')]: {
-      width: 300,
+      width: '100%',
       margin: theme.spacing(0, 0),
     },
     '& .MuiTypography-body1': {
@@ -120,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
-      justifyContent: 'flex-start',
+      alignItems: 'center',
     },
   },
   listItem: {
