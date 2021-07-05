@@ -4,10 +4,20 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: 1150,
     height: 550,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      height: 655,
+      top: 0,
+      left: 0,
+    },
   },
   header: {
     borderBottom: `1px dotted ${theme.palette.divider}`,
     width: 1000,
+    [theme.breakpoints.down('sm')]: {
+      width: 300,
+      margin: theme.spacing(0, 0),
+    },
     '& .MuiTypography-body1': {
       display: 'inline-flex',
       justifyContent: 'flex-start',
@@ -20,12 +30,18 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 1.5,
     fontSize: '2rem',
     width: 900,
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+    },
   },
 
   icon: {
     color: '#00A3E1',
     fontSize: '2.8rem',
     marginBottom: '-13px',
+    [theme.breakpoints.down('sm')]: {
+      // marginBottom: 0,
+    },
   },
   body: {
     width: '1000px',
@@ -33,6 +49,11 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'nowrap',
     margin: theme.spacing(0, 10),
     color: theme.props.MuiTypography.color,
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      margin: 0,
+      width: '100%',
+    },
   },
   sectionOne: {
     fontFamily: 'Arial',
