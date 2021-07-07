@@ -40,16 +40,23 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '-13px',
   },
   body: {
-    width: '950px',
+    width: '1050px',
     display: 'flex',
     flexWrap: 'nowrap',
-    margin: theme.spacing(0, 20),
     color: theme.props.MuiTypography.color,
     [theme.breakpoints.down('sm')]: {
-      flexWrap: ' wrap',
-      margin: theme.spacing(0, 0),
+      flexWrap: 'wrap',
+      justifyContent: 'flex-start',
       width: '100%',
     },
+  },
+  bodyOne: {
+    display: 'flex',
+    width: '50%',
+  },
+  bodyTwo: {
+    display: 'flex',
+    width: '50%',
   },
   sectionOne: {
     fontFamily: 'Arial',
@@ -59,20 +66,17 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       width: '100%',
       marginTop: '-160px',
-      marginLeft: '90px',
       fontSize: '0.9rem',
     },
   },
   sectionTwo: {
-    width: '50%',
+    width: '70%',
     fontFamily: 'Arial',
     lineHeight: 2.5,
     marginTop: '60px',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
-      // marginTop: '20px',
       marginTop: '-160px',
-      marginLeft: '90px',
       fontSize: '0.9rem',
     },
   },
@@ -90,16 +94,21 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   timeline: {
-    marginLeft: '-120px',
     marginTop: '50px',
+    display: 'flex',
+    justifyContent: 'flex-start',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '-130px',
       marginTop: '30px',
+      display: 'inline-flex',
     },
   },
   timelineContent: {
     color: '#00A3E1',
     fontWeight: 'bold',
+    [theme.breakpoints.down('sm')]: {
+      fontWeight: 'light',
+      fontSize: '0.7rem',
+    },
   },
   timelineDot: {
     backgroundColor: '#00A3E1',
