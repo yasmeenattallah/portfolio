@@ -58,8 +58,9 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '60px',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
-      marginTop: '0px',
-      // marginLeft: '-10px',
+      marginTop: '-160px',
+      marginLeft: '90px',
+      fontSize: '0.9rem',
     },
   },
   sectionTwo: {
@@ -69,6 +70,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '60px',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
+      // marginTop: '20px',
+      marginTop: '-160px',
+      marginLeft: '90px',
+      fontSize: '0.9rem',
     },
   },
   bodyTitle: {
@@ -88,9 +93,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '-120px',
     marginTop: '50px',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '10px',
-      // right: 0,
-      padding: 0,
+      marginLeft: '-130px',
       marginTop: '30px',
     },
   },
@@ -112,11 +115,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '40px',
     width: 1100,
     [theme.breakpoints.down('sm')]: {
-      // flexFlow: 'column nowrap',
       marginLeft: 5,
       justifyContent: 'space-between',
       width: '100%',
-      // padding: 8,
     },
   },
   skillsIcon: {
