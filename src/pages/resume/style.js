@@ -46,8 +46,8 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(0, 20),
     color: theme.props.MuiTypography.color,
     [theme.breakpoints.down('sm')]: {
-      flexWrap: 'wrap',
-      margin: 0,
+      flexWrap: ' wrap',
+      margin: theme.spacing(0, 0),
       width: '100%',
     },
   },
@@ -57,7 +57,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: 2.178,
     marginTop: '60px',
     [theme.breakpoints.down('sm')]: {
-      width: '80%',
+      width: '100%',
+      marginTop: '0px',
+      // marginLeft: '-10px',
     },
   },
   sectionTwo: {
@@ -66,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: 2.5,
     marginTop: '60px',
     [theme.breakpoints.down('sm')]: {
-      width: '80%',
+      width: '100%',
     },
   },
   bodyTitle: {
@@ -86,8 +88,10 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '-120px',
     marginTop: '50px',
     [theme.breakpoints.down('sm')]: {
-      marginLeft: '-20px',
+      marginLeft: '10px',
+      // right: 0,
       padding: 0,
+      marginTop: '30px',
     },
   },
   timelineContent: {
@@ -108,10 +112,11 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '40px',
     width: 1100,
     [theme.breakpoints.down('sm')]: {
-      flexFlow: 'column nowrap',
-      marginLeft: 0,
-      justifyContent: 'flex-start',
+      // flexFlow: 'column nowrap',
+      marginLeft: 5,
+      justifyContent: 'space-between',
       width: '100%',
+      // padding: 8,
     },
   },
   skillsIcon: {
@@ -124,6 +129,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     '&:hover': {
       boxShadow: `-7px -7px 10px ${theme.palette.action.selected} , 5px 5px 10px ${theme.palette.action.selected}`,
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '100px',
     },
   },
 }));
