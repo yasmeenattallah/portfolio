@@ -77,12 +77,17 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: '2px solid #00A3E1',
     marginTop: '30px',
     display: 'inline-block',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '0px',
+      fontSize: '1.2rem',
+    },
   },
   timeline: {
     marginLeft: '-120px',
     marginTop: '50px',
     [theme.breakpoints.down('sm')]: {
       marginLeft: '-20px',
+      padding: 0,
     },
   },
   timelineContent: {
@@ -102,6 +107,12 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'wrap',
     marginLeft: '40px',
     width: 1100,
+    [theme.breakpoints.down('sm')]: {
+      flexFlow: 'column nowrap',
+      marginLeft: 0,
+      justifyContent: 'flex-start',
+      width: '100%',
+    },
   },
   skillsIcon: {
     width: '200px',
