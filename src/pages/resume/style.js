@@ -6,6 +6,9 @@ const useStyles = makeStyles((theme) => ({
     height: 622,
     overflowY: 'scroll',
     overflowX: 'hidden',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   header: {
     borderBottom: `1px dotted ${theme.palette.divider}`,
@@ -16,12 +19,19 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: 'Kaushan Script',
     },
     margin: theme.spacing(6, 10),
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      margin: theme.spacing(0, 0),
+    },
   },
   title: {
     color: '#00A3E1',
     letterSpacing: 1.5,
     fontSize: '2rem',
     width: 900,
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+    },
   },
 
   icon: {
@@ -35,18 +45,29 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: 'nowrap',
     margin: theme.spacing(0, 20),
     color: theme.props.MuiTypography.color,
+    [theme.breakpoints.down('sm')]: {
+      flexWrap: 'wrap',
+      margin: 0,
+      width: '100%',
+    },
   },
   sectionOne: {
     fontFamily: 'Arial',
     width: '70%',
     lineHeight: 2.178,
     marginTop: '60px',
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+    },
   },
   sectionTwo: {
     width: '50%',
     fontFamily: 'Arial',
     lineHeight: 2.5,
     marginTop: '60px',
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+    },
   },
   bodyTitle: {
     fontSize: '1.6rem',
@@ -60,6 +81,9 @@ const useStyles = makeStyles((theme) => ({
   timeline: {
     marginLeft: '-120px',
     marginTop: '50px',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '-20px',
+    },
   },
   timelineContent: {
     color: '#00A3E1',
