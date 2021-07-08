@@ -1,9 +1,19 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
+  // [theme.breakpoints.down('sm')]: {
+  //   '& .MuiBox-root .MuiBox-root-28': {
+  //     padding: 0,
+  //     border: '5px solid #f0f',
+  //   },
+  // },
   root: {
     width: 1166,
     height: 622,
+    '& .MuiBox-root-28': {
+      // padding: 0,
+      border: '5px solid #f00',
+    },
     overflowY: 'scroll',
     overflowX: 'hidden',
     [theme.breakpoints.down('sm')]: {
@@ -21,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(6, 10),
     [theme.breakpoints.down('sm')]: {
       width: '100%',
+      padding: 0,
       margin: theme.spacing(0, 0),
     },
   },
@@ -39,10 +50,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2.8rem',
     marginBottom: '-13px',
   },
+  '&.MuiBox-root-28': {
+    padding: 0,
+  },
   body: {
     width: '1050px',
     display: 'flex',
     flexWrap: 'nowrap',
+
     color: theme.props.MuiTypography.color,
     [theme.breakpoints.down('sm')]: {
       flexWrap: 'wrap',
@@ -77,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
   sectionTwo: {
     width: '70%',
     fontFamily: 'Arial',
-    lineHeight: 2.5,
+    lineHeight: 2.178,
     marginTop: '60px',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
@@ -103,9 +118,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'flex-start',
     [theme.breakpoints.down('sm')]: {
       marginTop: '30px',
-      display: 'inline-flex',
+      '& .MuiTimelineItem-missingOppositeContent:before': {
+        padding: 0,
+        content: '',
+      },
     },
   },
+
   timelineContent: {
     color: '#00A3E1',
     fontWeight: 'bold',
