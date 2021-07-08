@@ -107,10 +107,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'flex-start',
     [theme.breakpoints.down('sm')]: {
-      marginTop: '30px',
       '& .MuiTimelineItem-missingOppositeContent:before': {
         padding: 0,
-        content: '',
+        flex: 0,
       },
     },
   },
@@ -119,7 +118,6 @@ const useStyles = makeStyles((theme) => ({
     color: '#00A3E1',
     fontWeight: 'bold',
     [theme.breakpoints.down('sm')]: {
-      fontWeight: 'light',
       fontSize: '0.7rem',
     },
   },
