@@ -1,19 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  // [theme.breakpoints.down('sm')]: {
-  //   '& .MuiBox-root .MuiBox-root-28': {
-  //     padding: 0,
-  //     border: '5px solid #f0f',
-  //   },
-  // },
   root: {
     width: 1166,
     height: 622,
-    '& .MuiBox-root-28': {
-      // padding: 0,
-      border: '5px solid #f00',
-    },
     overflowY: 'scroll',
     overflowX: 'hidden',
     [theme.breakpoints.down('sm')]: {
