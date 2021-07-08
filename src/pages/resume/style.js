@@ -53,10 +53,16 @@ const useStyles = makeStyles((theme) => ({
   bodyOne: {
     display: 'flex',
     width: '50%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   bodyTwo: {
     display: 'flex',
     width: '50%',
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   sectionOne: {
     fontFamily: 'Arial',
@@ -65,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '60px',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
-      marginTop: '-160px',
       fontSize: '0.9rem',
     },
   },
@@ -76,7 +81,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '60px',
     [theme.breakpoints.down('sm')]: {
       width: '100%',
-      marginTop: '-160px',
       fontSize: '0.9rem',
     },
   },
