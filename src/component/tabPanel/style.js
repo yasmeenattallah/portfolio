@@ -92,6 +92,9 @@ const useStyles = makeStyles((theme) => ({
       color: theme.props.MuiTypography.color,
       minHeight: '0px',
     },
+    '& .MuiBox-root-28': {
+      padding: 0,
+    },
     '& .MuiAppBar-colorPrimary': {
       background: '#303030',
     },
