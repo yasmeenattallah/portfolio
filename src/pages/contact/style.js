@@ -43,7 +43,10 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Roboto',
     textAlign: 'center',
     [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
       textAlign: 'left',
+      marginBottom: '10px',
+      marginTop: '10px',
     },
   },
   body: {
