@@ -19,7 +19,7 @@ const PortfolioPage = () => {
         <Typography className={classes.title}>Portfolio .</Typography>
         <CardTravelOutlinedIcon className={classes.icon} />
       </div>
-      <GridList>
+      <GridList className={classes.container}>
         <GridListTile className={classes.body}>
           <Link
             href="https://github.com/yasmeenattallah/house-hunting-app"
