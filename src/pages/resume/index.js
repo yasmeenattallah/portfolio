@@ -41,7 +41,7 @@ const ResumePage = () => {
                 <TimelineConnector className={classes.timelineDot} />
               </TimelineSeparator>
               <TimelineContent className={classes.timelineContent}>
-                2015
+                Sep,2015
               </TimelineContent>
             </TimelineItem>
             <TimelineItem>
@@ -50,7 +50,7 @@ const ResumePage = () => {
                 <TimelineConnector className={classes.timelineDot} />
               </TimelineSeparator>
               <TimelineContent className={classes.timelineContent}>
-                2020
+                Jun,2020
               </TimelineContent>
             </TimelineItem>
           </Timeline>

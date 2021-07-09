@@ -111,6 +111,9 @@ const useStyles = makeStyles((theme) => ({
         padding: 0,
         flex: 0,
       },
+      '&.MuiTimeline-root': {
+        padding: '6px 2px',
+      },
     },
   },
 
