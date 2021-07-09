@@ -4,6 +4,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: 1166,
     height: 550,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
   header: {
     borderBottom: `1px dotted ${theme.palette.divider}`,
@@ -13,6 +16,10 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: 'flex-start',
       fontFamily: 'Kaushan Script',
     },
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      margin: theme.spacing(0, 0),
+    },
     margin: theme.spacing(6, 10),
   },
   title: {
@@ -20,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 1.5,
     fontSize: '2rem',
     width: 900,
+    [theme.breakpoints.down('sm')]: {
+      width: '80%',
+    },
   },
 
   icon: {
@@ -32,6 +42,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.8rem',
     fontFamily: 'Roboto',
     textAlign: 'center',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
+      textAlign: 'left',
+      marginBottom: '10px',
+      marginTop: '10px',
+    },
   },
   body: {
     display: 'flex',
@@ -39,6 +55,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     margin: theme.spacing(7, 24),
     width: 800,
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      width: '100%',
+      margin: theme.spacing(0, 0),
+    },
   },
   input: {
     '& .MuiOutlinedInput-notchedOutline': {
@@ -52,9 +73,15 @@ const useStyles = makeStyles((theme) => ({
       fontWeight: 'bold',
       width: 350,
       marginBottom: 30,
+      [theme.breakpoints.down('sm')]: {
+        width: '100%',
+      },
     },
     '& .MuiOutlinedInput-multiline': {
       width: 750,
+      [theme.breakpoints.down('sm')]: {
+        width: '100%',
+      },
     },
     '& .MuiInputLabel-root': {
       color: theme.props.MuiTypography.color,
