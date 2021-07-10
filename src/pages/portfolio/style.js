@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '-13px',
   },
   container: {
-    width: '90%',
+    width: '100%',
     display: 'flex',
     justifyContent: 'space-around',
     [theme.breakpoints.down('sm')]: {
