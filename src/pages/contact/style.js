@@ -108,6 +108,9 @@ const useStyles = makeStyles((theme) => ({
   },
   alert: {
     width: 750,
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+    },
   },
 }));
 export default useStyles;
