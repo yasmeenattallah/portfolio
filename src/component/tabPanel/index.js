@@ -8,7 +8,7 @@ import NavPanel from './navPanel';
 
 const Header = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   return <>{isMobile ? <PersistentDrawerLeft /> : <NavPanel />}</>;
 };
