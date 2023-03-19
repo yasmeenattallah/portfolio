@@ -22,14 +22,8 @@
         "extensions": [".js", ".jsx"]
       }
     ],
-    "react/jsx-props-no-spreading": [0],
+    "react/jsx-props-no-spreading": [0]
     // configure the prettier plugin
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true
-      }
-    ]
+  
   }
 }
